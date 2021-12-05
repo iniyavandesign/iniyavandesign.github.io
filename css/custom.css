@@ -1,0 +1,90 @@
+:root{
+    --background-color: white ;
+    --secondary-color: #313131;
+    --main-text-color: white;
+    --sub-text-color: rgb(153, 153, 153) ;
+    --primary-color: #FF0022;
+}
+
+@font-face{
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    src: local();
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+.container{
+    scroll-snap-align: start;
+}
+
+.bg-gradient{
+    background-color: var(--background-color);
+}
+
+.box-shadow{
+    box-shadow: 0 0.25rem 0.85rem rgb(0 0 0 / 3%);
+}
+
+.nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
+}
+
+.bg-body {
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-body-bg-rgb),var(--bs-bg-opacity))!important;
+}
+
+.nav-scroller .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    color: rgba(255, 255, 255, .75);
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+
+.navbar-brand{
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.navbar-brand:hover{
+    color: var(--primary-color);
+}
+
+.nav-link{
+    color: var(--secondary-color);
+    font-weight: 400;
+}
+
+.nav-link:hover{
+    color:var(--primary-color)
+}
+
+.active{
+    color: var(--primary-color);
+    font-weight: 800;
+    /* border-bottom: 3px solid var(--primary-color); */
+}
+
+.show {
+    display: block;
+}
+
+.content {
+    background-color: white;
+    padding: 10px;
+  }
+
