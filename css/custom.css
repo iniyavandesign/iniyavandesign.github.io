@@ -1,9 +1,9 @@
 :root{
-    --background-color: white ;
+    --background-color: #fff ;
     --secondary-color: #313131;
     --main-text-color: white;
-    --sub-text-color: rgb(153, 153, 153) ;
-    --primary-color: #FF0022;
+    --sub-text-color: #999999 ;
+    --primary-color: #c7417b;
 }
 
 @font-face{
@@ -75,7 +75,7 @@ body{
 
 .active{
     color: var(--primary-color);
-    font-weight: 800;
+    font-weight: 700;
     /* border-bottom: 3px solid var(--primary-color); */
 }
 
