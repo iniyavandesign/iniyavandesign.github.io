@@ -15,7 +15,7 @@
     <!-- NAVABAR DELECERATION -->
     <nav class="navbar navbar-expand-lg bg-gradient box-shadow sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="">Portfolio.</a>
+            <a class="navbar-brand" id="portfolio" href="index.html">Portfolio.</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
             aria-expanded="false" aria-label="Toggle" navigation> 
                 <span class="navbar-toggler-icon">
@@ -28,7 +28,7 @@
                         <a class="nav-link" aria-current="page" href="#work">Case study</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="">About us</a>
+                        <a class="nav-link" aria-current="page" href="about_us.html">About us</a>
                     </li>
                     <!-- <li class="nav-item">
                         <a class="nav-link sub" aria-current="page" href=""><span class="fab fa-behance" style="margin-top: 5px;"></span></a>
@@ -134,21 +134,64 @@
                       </li>
                     <!-- END UI DESIGN PROJECT -->
                     <!-- LOGO DESIGN PROJECT -->
-                    <!-- <li class="col-md-6 mb-3 column uidesign" style="border-radius: none;">
+                    <li class="col-md-12 mb-3 column logodesign" style="border-radius: none;">
+                      <h3 class="text-center">No Data Found</h3>
                         <a href="#" target="_blank">
                           <div class="grid" data-aos="flip-down" >
                             <figure class="" style="background-color: none;" >
-                              <img src="" class="img-fluid" width="100%" height="100%"  />
+                              <!-- <img src="" class="img-fluid" width="100%" height="100%"  /> -->
                             </figure>
                           </a>
-                      </li> -->
+                      </li>
                       <!-- END LOGO DESIGN PROJECT -->
+
+                      <!-- TYPOGRAPHY DESIGN PROJECT -->
+                    <li class="col-md-12 mb-3 column typography" style="border-radius: none;">
+                      <h3 class="text-center">No Data Found</h3>
+                        <a href="#" target="_blank">
+                          <div class="grid" data-aos="flip-down" >
+                            <figure class="" style="background-color: none;" >
+                              <!-- <img src="" class="img-fluid" width="100%" height="100%"  /> -->
+                            </figure>
+                          </a>
+                      </li>
+                      <!-- END TYPOGRAPHY DESIGN PROJECT -->
+
+                      <!-- MICROANIMATION DESIGN PROJECT -->
+                    <li class="col-md-12 mb-3 column microanimation" style="border-radius: none;">
+                      <h3 class="text-center">No Data Found</h3>
+                        <a href="#" target="_blank">
+                          <div class="grid" data-aos="flip-down" >
+                            <figure class="" style="background-color: none;" >
+                              <!-- <img src="" class="img-fluid" width="100%" height="100%"  /> -->
+                            </figure>
+                          </a>
+                      </li>
+                      <!-- END MICROANIMATION DESIGN PROJECT -->
                 </ul>
             </div>
         </div>
     </div>
     <!-- END WORK SECTION -->
    
+    <!-- FOOTER SECTION -->
+    <div class="container border-top">
+      <div class="row">
+        <div class="col-md-6" style="margin-top: 10px;">
+          <footer class="px-5 text-muted"> Created by the Iniyavan &middot; &copy; 2021</footer>
+        </div>
+        <div class="col-md-6" style="padding-left: 38%; margin-top: 15px;">
+          <a href="https://www.behance.net/iniyavan_m" target="_blank" class="" data-toggle="tooltip"
+          data-placement="bottom" title="Behance"><i class="fab fa-behance-square"
+          style="width: 35px; height: 35px;"></i></a>
+          <a href="" class="" data-toggle="tooltip" data-placement="bottom" title="Linkedin"><i
+          class="fab fa-linkedin" style="width: 35px; height: 35px;"></i></a>
+        </div>
+      </div><br>
+  
+    </div>
+    <!-- END FOOTER SECTION -->
+
     <!-- JAVASCRIPT DELECERATION -->
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
@@ -185,6 +228,27 @@
             this.className += " active";
           });
         }
+
+        $(document).ready(function () {
+      $(document).click(function () {
+        // if($(".navbar-collapse").hasClass("in")){
+        $('.navbar-collapse').collapse('hide');
+        // }
+      });
+    });
+    $(document).ready(function(event){
+      $('work').on('click', function(event){
+        if(this.hash !==""){
+          event.preventDefault();
+          var hash = this.hash;
+          $('portfolio').animate({
+            scrollTop : $(hash).offset(). top
+          }, 800, function(){
+            window.location.hash = hash;
+          });
+        }
+      });
+    });
         </script>
 </body>
 </html>
