@@ -3,7 +3,7 @@
     --secondary-color: #313131;
     --main-text-color: white;
     --sub-text-color: #999999 ;
-    --primary-color: #2F3743;
+    --primary-color: #ffffff;
 }
 
 @font-face{
@@ -18,7 +18,7 @@
 }
 
 body {
-    background-image: linear-gradient(130deg, #F0F6FA 20% , #fff);
+    background-image: linear-gradient(130deg, #fff 20% , #fff);
 }
 
 .container{
@@ -30,6 +30,11 @@ body {
 } */
 
 .box-shadow{
+    box-shadow: 0 0.25rem 0.85rem rgb(0 0 0 / 3%);
+}
+
+.fixed-top{
+    background-color: #fff;
     box-shadow: 0 0.25rem 0.85rem rgb(0 0 0 / 3%);
 }
 

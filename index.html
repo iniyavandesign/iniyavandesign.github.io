@@ -2,6 +2,9 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content=""Iniyavan design", "iniyavan", "iniyavan portfolio", "design iniyavan"">
+    <meta name="description" content="Hey I am Iniyavan.M. I am a Graphic Designer. I work in Nithra Apps India Private Limited in Tiruchengode.">
+    <meta name="author" content="iniyavandesign.github.io">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Iniyavan.M</title>
     <!-- Stylsheet link here -->
@@ -14,11 +17,11 @@
 
 <body>
     <!-- NAVABAR DELECERATION -->
-    <nav class="navbar navbar-expand-lg bg-gradient">
+    <nav class="navbar navbar-expand-lg bg-gradient fixed-top">
         <div class="container">
             <a class="navbar-brand" id="portfolio" href="index.html">Portfolio.</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-            aria-expanded="false" aria-label="Toggle" navigation> 
+            aria-expanded="false" aria-label="Toggle" navigation>
                 <span class="navbar-toggler-icon">
                     <i class="fas fa-bars" style="color: rgb(0, 0, 0); font-size: 28px; color: var(--primary-color);"></i>
                 </span>
@@ -46,10 +49,10 @@
     <!-- HEADER SECTION -->
     <div class="container-fluid header_section">
         <!--  px-4 pt-5 my-5 style="padding-bottom: 3rem; padding-top: 0.5rem;" -->
-        <div class="container col-xxl-8 px-2 py-2 pt-2 my-0">
+        <div class="container col-xxl-8 px-2 py-5 pt-2 my-0">
           <div class="row flex-lg-row-reverse align-items-center g-2 py-5 px-1">
-            <div class="col-sm-6 col-lg-6">
-              <img src="image/header_img.png" class=" d-block mx-md-auto img-fluid img-hov" width="400px" height="500px"
+            <div class="col-sm-6 col-lg-6 py-5">
+              <img src="image/home.svg" class=" d-block mx-md-auto img-fluid img-hov" width="400px" height="500px"
                 alt="header_img" loading="header_img">
               <br>
             </div>
@@ -74,10 +77,10 @@
             <p class="text-left" style="color: var(--secondary-color);">List out my best work here with good presentation.</p>
         </div>
     </section>
-    
+
     <div class="container" id="work">
         <div class="col-md-12 d-flex justify-content-center align-items-center">
-            <div class="nav-scroller bg-body box-shadow shadow-sm" style="border-radius: 100px;"> 
+            <div class="nav-scroller bg-body" style="border-radius: 100px;">
                 <nav class="nav nav-underline" id="myBtnContainer" style="cursor: pointer;" aria-label="Secondary navigation">
                   <a class="nav-link cat active" filterSelection = "all">All Work</a>
                   <a class="nav-link cat" filterSelection = "uidesign">UI Design</a>
@@ -134,12 +137,22 @@
                           </a>
                       </li>
                     <!-- END UI DESIGN PROJECT -->
+                     <!-- LOGO DESING -->
+                     <li class="col-md-6 mb-3 column logodesign" style="border-radius: none;">
+                      <a href="#" target="_blank">
+                        <div class="grid" data-aos="flip-down" >
+                          <figure class="img_shadow" style="background-color: none;" >
+                            <img src="image/Low_battey.png" class="img-fluid" width="100%" height="100%"/>
+                          </figure>
+                        </a>
+                    </li>
+                  <!-- END LOGO DESING -->
                 </ul>
             </div>
         </div>
     </div>
     <!-- END WORK SECTION -->
-   
+
     <!-- FOOTER SECTION -->
     <div class="footer-basic border-top">
       <footer>
@@ -181,12 +194,12 @@
         $(document).ready(function(){
             $(".cat").click(function(){
                 var value = $(this).attr('filterSelection');
-                
+
                 if(value == "all") {
                     $('.column').show('1000');
                 } else {
                     $(".column").not('.'+value).hide('3000');
-                    $('.column').filter('.'+value).show('3000'); 
+                    $('.column').filter('.'+value).show('3000');
                 }
             });
             $(".cat").each(function(){
