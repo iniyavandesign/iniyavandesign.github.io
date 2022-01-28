@@ -42,7 +42,7 @@ const saveMessages = (name, company, ema, msgContent) => {
   newContactForm.set({
     name: name,
     company: company,
-    ema: ema,
+    emailaddress: ema,
     msgContent: msgContent,
   });
 };

@@ -144,26 +144,26 @@
 
           <form class="hire_form" action="" id="contactForm" autocomplete="off">
             <div class="alert alert-success" role="alert" >
-              Thank you for your valuable Message
+              Thank you for your valuable Message!!
             </div>
             <div class="mb-3">
               <label for="exampleFormControlInput1" class="form-label">Please Provide Your Name</label>
-              <input type="text" class="form-control" id="name_cp"  placeholder="Ex : Peg Legge" required>
+              <input type="text" class="form-control" id="name_cp" tabindex="1" placeholder="Ex : Peg Legge" required>
             </div>
             <div class="mb-3">
               <label for="exampleFormControlInput1" class="form-label">Please Provide Your Company Name</label>
-              <input type="text" class="form-control" id="company_name" placeholder="Ex : ABCD Company" required>
+              <input type="text" class="form-control" tabindex="2" id="company_name" placeholder="Ex : ABCD Company" required>
             </div>
             <div class="mb-3">
               <label for="exampleFormControlInput1" class="form-label">Please Provide Your E-Mail Address</label>
-              <input type="email" class="form-control" id="email" placeholder="Ex : xyz@gmail.com" required>
+              <input type="email" class="form-control" tabindex="3" id="email" placeholder="Ex : xyz@gmail.com" required>
             </div>
             <div class="mb-3">
               <label for="exampleFormControlTextarea1" class="form-label">Please Provide Your Message here</label>
-              <textarea class="form-control" type="text" id="msg" placeholder="Ex : Are you interest to work with us" rows="5" required></textarea>
+              <textarea class="form-control" tabindex="4" type="text" id="msg" placeholder="Ex : Are you interest to work with us" rows="5" required></textarea>
             </div>
             <div class="mb-3 justify-content-center align-items-center d-flex">
-              <button class="btn" style="background-color: var(--secondary-color); color: #fff;" type="submit">Send Message</button>
+              <button class="btn" tabindex="5" style="background-color: var(--secondary-color); color: #fff;" type="submit">Send Message</button>
             </div>
           </form>
     </div>
@@ -180,8 +180,8 @@
         <!-- <a href="https://www.youtube.com/channel/UC6k4jDfayvHq1rG9djA3MeQ" target="_blank"><i class="fab fa-youtube"></i></a>
         <a href="https://studiotuneiniyavan.blogspot.com/?utm_source=portfolio&utm_medium=navbar&utm_campaign=click" target="_blank"><i class="fab fa-blogger-b"></i></a></div> -->
         <ul class="list-inline">
-            <li class="list-inline-item active"><a href="#portfolio">Home</a></li>
-            <li class="list-inline-item"><a href="#work">Case study</a></li>
+            <li class="list-inline-item active"><a href="index.html">Home</a></li>
+            <li class="list-inline-item"><a href="index.html#work">Case study</a></li>
             <li class="list-inline-item active"><a href="#">Download CV</a></li>
         </ul>
         <p class="copyright">Iniyavan Design © 2021 - 2022</p>
@@ -196,6 +196,16 @@
   <script src="js/hire.js"></script>
   <script type=" text/javascript" src="js/bootstrap.bundle.min.js"></script>
   <script type="text/javascript" src="js/popper.min.js"></script>
+
+  <script>
+     $(document).ready(function () {
+    $(document).click(function () {
+      // if($(".navbar-collapse").hasClass("in")){
+      $('.navbar-collapse').collapse('hide');
+      // }
+    });
+  });
+  </script>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q375GEW9HJ"></script>
@@ -236,14 +246,6 @@ gtag('config', 'G-Q375GEW9HJ');
           this.className += " active";
         });
       }
-
-      $(document).ready(function () {
-    $(document).click(function () {
-      // if($(".navbar-collapse").hasClass("in")){
-      $('.navbar-collapse').collapse('hide');
-      // }
-    });
-  });
   $(document).ready(function(event){
     $('work').on('click', function(event){
       if(this.hash !==""){
