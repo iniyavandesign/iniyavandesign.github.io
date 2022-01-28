@@ -21,8 +21,9 @@ function submitForm(e) {
   var name = getElementVal("name_cp");
   var company = getElementVal("company_name");
   var msgContent = getElementVal("msg");
+  var ema = getElementVal("email");
 
-  saveMessages(name, company, msgContent);
+  saveMessages(name, company, ema, msgContent);
 
   //   enable alert
   document.querySelector(".alert").style.display = "block";
@@ -36,11 +37,12 @@ function submitForm(e) {
   document.getElementById("contactForm").reset();
 }
 
-const saveMessages = (name, company, msgContent) => {
+const saveMessages = (name, company, ema, msgContent) => {
   var newContactForm = contactFormDB.push();
   newContactForm.set({
     name: name,
     company: company,
+    ema: ema,
     msgContent: msgContent,
   });
 };
