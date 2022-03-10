@@ -34,6 +34,7 @@
 }
 
 .fixed-top{
+    backdrop-filter: blur(2px);
     background-color: #fff;
     box-shadow: 0 0.25rem 0.85rem rgb(0 0 0 / 3%);
 }
