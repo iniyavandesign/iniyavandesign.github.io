@@ -4,6 +4,7 @@
     --main-text-color: white;
     --sub-text-color: #999999 ;
     --primary-color: #ffffff;
+    --muted-color : #fafafa;
 }
 
 @font-face{
@@ -26,7 +27,8 @@
 }
 
 /* .bg-gradient{
-    background-color: var(--background-color);
+    backdrop-filter: blur(5px);
+    background-color: var(--muted-color);
 } */
 
 .box-shadow{
@@ -34,8 +36,6 @@
 }
 
 .fixed-top{
-    backdrop-filter: blur(2px);
-    background-color: #fff;
     box-shadow: 0 0.25rem 0.85rem rgb(0 0 0 / 3%);
 }
 
