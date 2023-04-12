@@ -11,6 +11,6 @@ const sr = ScrollReveal({
   sr.reveal(`.work`, { delay: 600 });
   sr.reveal(`.work_title`, { delay: 700 });
   sr.reveal(`.picture`, { delay: 700 });
-  sr.reveal(`.hire`, { delay: 800 });
+  sr.reveal(`.hire`, { delay: 300 });
   sr.reveal(`.filters__content`, { delay: 900 });
   sr.reveal(`.filters`, { delay: 1000 });
