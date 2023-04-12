@@ -10,7 +10,7 @@ const sr = ScrollReveal({
   sr.reveal(`.header_section`, { delay: 500 });
   sr.reveal(`.work`, { delay: 600 });
   sr.reveal(`.work_title`, { delay: 700 });
-  sr.reveal(`.picture`, { interval: 100, delay: 700 });
+  sr.reveal(`.picture`, { delay: 700 });
   sr.reveal(`.hire`, { delay: 800 });
   sr.reveal(`.filters__content`, { delay: 900 });
   sr.reveal(`.filters`, { delay: 1000 });

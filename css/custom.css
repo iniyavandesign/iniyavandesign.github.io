@@ -1,10 +1,14 @@
 :root{
-    --background-color: #F0F6FA;
+    --background-color: #fafafa;
     --secondary-color: #313131;
     --main-text-color: white;
     --sub-text-color: #999999 ;
-    --primary-color: #ffffff;
+    --primary-color: #eba134;
     --muted-color : #eeeeee;
+}
+
+.hint{
+    font-size:16px;
 }
 
 @font-face{
