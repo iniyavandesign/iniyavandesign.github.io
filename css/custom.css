@@ -3,7 +3,7 @@
     --secondary-color: #313131;
     --main-text-color: white;
     --sub-text-color: #999999 ;
-    --primary-color: #ffffff;
+    --primary-color: #0062cc;
     --muted-color : #eeeeee;
 }
 
@@ -40,9 +40,13 @@
 }
 
 .fixed-top{
-    backdrop-filter: blur(10px);
-    background-color: rgba(250,250,250,0.8);
+    backdrop-filter: blur(8px);
+    //background-color: rgba(250,250,250,0.8);
     box-shadow: 0 0.25rem 0.85rem rgb(0 0 0 / 3%);
+}
+
+#portfolio{
+    font-size:1.5rem;
 }
 
 .nav-scroller {
@@ -54,7 +58,7 @@
 
 .bg-body {
     --bs-bg-opacity: 1;
-    background-color: rgba(var(--bs-body-bg-rgb),var(--bs-bg-opacity))!important;
+    //background-color: rgba(var(--bs-body-bg-rgb),var(--bs-bg-opacity))!important;
 }
 
 .nav-scroller .nav {
@@ -116,7 +120,8 @@
 }
 
 .hire{
-    background-color: #fafafa; 
+    background-color: white; 
+    box-shadow: 0 0.25rem 0.85rem rgb(0 0 0 / 2%);
 }
 
 .hire_form{
