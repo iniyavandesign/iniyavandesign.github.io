@@ -11,6 +11,13 @@
     font-size:16px;
 }
 
+.bg_img{
+    background-image: url("../image/bg2.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 @font-face{
     font-family: 'Lato', sans-serif;
     /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
@@ -40,8 +47,8 @@
 }
 
 .fixed-top{
-    backdrop-filter: blur(8px);
-    //background-color: rgba(250,250,250,0.8);
+    backdrop-filter: blur(5px);
+    //background-color: rgba(250,250,250,0.3);
     box-shadow: 0 0.25rem 0.85rem rgb(0 0 0 / 3%);
 }
 

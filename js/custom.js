@@ -7,5 +7,5 @@ const sr = ScrollReveal({
   });
   `q`
   sr.reveal(`.profile__border`);
-  sr.reveal(`.header_section`, { delay: 500 });````` htyviuoi[poho;]`````
+  sr.reveal(`.header_section`, { delay: 500 });
   sr.reveal(`.filters`, { delay: 1000 });N
