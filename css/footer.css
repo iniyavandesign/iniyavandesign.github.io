@@ -38,7 +38,7 @@
 }
 
 .footer-basic ul a {
-  color: var(--primary-color);
+  color: var(--secondary-color);
   text-decoration:none;
   opacity:0.8;
 }
@@ -51,6 +51,12 @@
   text-align:center;
   padding-bottom:15px;
 }
+.bg_placeholder{
+  background-color: var(--background-color);
+    color: white;
+    border-color: #363636;
+}
+}
 
 .footer-basic .social > a {
   font-size:20px;
@@ -60,7 +66,7 @@
   display:inline-block;
   text-align:center;
   margin:0 8px;
-  color:var(--primary-color);
+  color:var(--secondary-color);
   opacity:0.75;
 }
 
