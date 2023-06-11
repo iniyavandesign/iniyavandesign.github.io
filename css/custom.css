@@ -21,9 +21,9 @@ body .body-overlay{
     z-index: -1;
     left:0;
     width:100%;
-    height:100%;
+    height:100vh;
     top:0;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     object-fit: cover;  
 
 }

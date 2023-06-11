@@ -56,6 +56,10 @@
     color: white;
     border-color: #363636;
 }
+.bg_placeholder:hover{
+  background-color: var(--background-color);
+    color: white;
+    border-color: #363636;
 }
 
 .footer-basic .social > a {
