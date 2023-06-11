@@ -91,9 +91,9 @@ body .body-overlay{
 }
 
 .navbar-brand{
-    color: var(--primary-color);
+    color: var(--secondary-color);
     font-weight: 700;
-}
+}`
 
 .navbar-brand:hover{
     color: var(--primary-color);
