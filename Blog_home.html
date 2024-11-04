@@ -118,5 +118,83 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
           </div> <!-- /container -->
  </section>
+  <!-- FOOTER SECTION -->
+  <div class="footer-basic hire" style="border-radius:50px 50px 0 0; background-color: var(--background-color);">
+    <footer>
+      <div class="social" style="color: var(--secondary-color)">
+        <!-- <a href="https://www.behance.net/iniyavan_m" target="_blank"><i class="fab fa-behance"></i></a>
+        <a href="https://in.linkedin.com/in/iniyavan-m" target="_blank"><i class="fab fa-linkedin-in"></i></a> -->
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://www.behance.net/iniyavan_m">Behance</a></li>
+            <li class="list-inline-item"><a href="https://in.linkedin.com/in/iniyavan-m"></i>LinkedIn</a></li>
+            <!-- <li class="list-inline-item"><a href="#work">Case study</a></li>
+            <li class="list-inline-item"><a href="#hire_me">Contact me</a></li> -->
+        </ul>
+        <p class="copyright">Copyright &copy; 2019 - 2024, Swotty Studio </p>
+    </footer>
+  <!-- END FOOTER SECTION -->
+
+  <!-- JAVASCRIPT DELECERATION -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+  <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script src="js/all.min.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="js/hire.js"></script>
+  <script type=" text/javascript" src="js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="js/popper.min.js"></script>
+
+  <script>
+      $(document).ready(function(){
+          $(".cat").click(function(){
+              var value = $(this).attr('filterSelection');
+
+              if(value == "all") {
+                  $('.column').show('1000');
+              } else {
+                  $(".column").not('.'+value).hide('3000');
+                  $('.column').filter('.'+value).show('3000');
+              }
+          });
+          $(".cat").each(function(){
+              $(this).click(function(){
+                  $(this).addClass("active");
+                  $(this).siblings().removeClass("active");
+              });
+          });
+      });
+      // Add active class to the current button (highlight it)
+      var btnContainer = document.getElementById("myBtnContainer");
+      var btns = btnContainer.getElementsByClassName("cat");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function(){
+          var current = document.getElementsByClassName("active");
+          current[0].className = current[0].className.replace(" active", "");
+          this.className += " active";
+        });
+      }
+
+      $(document).ready(function () {
+    $(document).click(function () {
+      // if($(".navbar-collapse").hasClass("in")){
+      $('.navbar-collapse').collapse('hide');
+      // }
+    });
+  });
+  $(document).ready(function(event){
+    $('work').on('click', function(event){
+      if(this.hash !==""){
+        event.preventDefault();
+        var hash = this.hash;
+        $('portfolio').animate({
+          scrollTop : $(hash).offset(). top
+        }, 1000, function(){
+          window.location.hash = hash;
+        });
+      }
+    });
+  });
+  </script>
 </body>
 </html>
