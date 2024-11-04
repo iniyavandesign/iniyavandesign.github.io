@@ -238,3 +238,10 @@ body .body-overlay{
     border-left: 1px dashed var(--primary-color);
     bottom: 0;
 }
+
+.blog_space{
+    margin-top: 65px;
+    left: 0;
+    right: 0;
+    padding: 25px;
+}
