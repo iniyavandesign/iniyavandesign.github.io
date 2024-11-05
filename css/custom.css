@@ -245,3 +245,13 @@ body .body-overlay{
     right: 0;
     padding: 25px;
 }
+
+.btn-outline-secondary:hover{
+    background-color: white;
+    color: #000;
+}
+
+.btn-outline-secondary{
+    border-color: white;
+    color: white;
+}
