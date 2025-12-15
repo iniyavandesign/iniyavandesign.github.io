@@ -7,8 +7,8 @@ const sr = ScrollReveal({
   });
   `q`
   sr.reveal(`.profile__border`);
-  sr.reveal(`.header_section`, { delay: 500 });
-  sr.reveal(`.filters`, { delay: 500 });
-  sr.reveal(`.third`, { delay: 1500 });
-  sr.reveal(`.four`, { delay: 2000 });
-  sr.reveal(`.five`, { delay: 2500 });N
+  sr.reveal(`.one`, { delay: 500 });
+  sr.reveal(`.two`, { delay: 500 });
+  sr.reveal(`.three`, { delay: 1000 });
+  sr.reveal(`.four`, { delay: 1500 });
+  sr.reveal(`.five`, { delay: 2000 });
