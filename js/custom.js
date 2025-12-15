@@ -9,6 +9,6 @@ const sr = ScrollReveal({
   sr.reveal(`.profile__border`);
   sr.reveal(`.one`, { delay: 500 });
   sr.reveal(`.two`, { delay: 500 });
-  sr.reveal(`.three`, { delay: 1000 });
-  sr.reveal(`.four`, { delay: 1500 });
-  sr.reveal(`.five`, { delay: 2000 });
+  sr.reveal(`.three`, { delay: 500 });
+  sr.reveal(`.four`, { delay: 500 });
+  sr.reveal(`.five`, { delay: 500 });
