@@ -180,6 +180,7 @@ border: 1.5px solid #ececec;
 /* MOBILE FIX */
 @media (max-width: 768px) {
   .big-card-wrapper {
+    border: 1.5px solid #ececec;
     flex-direction: column;
   }
 
