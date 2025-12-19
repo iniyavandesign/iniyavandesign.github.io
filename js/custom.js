@@ -7,8 +7,8 @@ const sr = ScrollReveal({
   });
   `q`
   sr.reveal(`.profile__border`);
-  sr.reveal(`.one`, { delay: 500 });
-  sr.reveal(`.two`, { delay: 500 });
-  sr.reveal(`.three`, { delay: 500 });
-  sr.reveal(`.four`, { delay: 500 });
-  sr.reveal(`.five`, { delay: 500 });
+  sr.reveal(`.one`, { delay: 0 });
+  sr.reveal(`.two`, { delay: 0 });
+  sr.reveal(`.three`, { delay: 0 });
+  sr.reveal(`.four`, { delay: 0 });
+  sr.reveal(`.five`, { delay: 0 });
