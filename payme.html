@@ -3,30 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" type="image/x-icon" href="image/logo.png">
-    <meta name="keywords"
-        content="nithra iniyavan, nithra apps, iniyavan nithra, iniyavandesign, iniyavan, iniyavanportfolio, designiniyavan, iniyavan_m, iniyavan ui designer, iniyavan ux designer">
-    <meta name="description"
-        content="Hi, I'm Iniyavan Mageshwaran. I'm a Senior Designer at Nithra Apps India Private Limited in Tamil Nadu. I have over 5+ years of experience in UI/UX design, and I'm proficient in problem-solving.">
-    <link rel="canonical" href="https://iniyavandesign.github.io">
-    <meta name=”robots” content="noindex, nofollow">
-    <meta name=”robots” content="index, follow">
-    <meta name=”robots” content="noindex, follow">
-    <meta name=”robots” content="index, nofollow">
-    <meta name="author" content="https://iniyavandesign.github.io">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:image" content="image/payme_case_study.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="1024">
-    <meta property="og:image:height" content="1024">
-    <meta name="twitter:card" content="Iniyavan Mageshwaran - Senior Designer @Nithra Apps" />
-    <meta name="twitter:site" content="https://iniyavandesign.github.io" />
-    <meta name="twitter:title" content="Iniyavan Mageshwaran - Senior Designer @Nithra Apps" />
-    <meta name="twitter:description"
-        content="Iniyavan Mageshwaran - Senior Designer at Nithra Apps India Private Limited in Tamil Nadu. I have 5+ years experience in UI/UX design with problem-solving skills." />
-    <meta name="twitter:image" content="image/Low_battey.png" />
-    <title>PayMe Case Study | Iniyavan Mageshwaran - Senior Designer @Nithra Apps</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>PayMe Case Study | Iniyavan Design</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
@@ -163,26 +142,27 @@
         /* Images & Placeholders */
         .hero-image {
             width: 100%;
-            height: 400px;
-            background-color: #e2e8f0;
+            height: 350px;
+            /* background-color: #e2e8f0; */
             border-radius: var(--radius);
-            margin-top: 40px;
+            margin-top: 100px;
+            margin-bottom: 100px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--text-light);
-            border: 2px dashed #cbd5e1;
+            /* border: 2px dashed #cbd5e1; */
         }
 
         .img-placeholder {
             width: 100%;
             height: 350px;
-            background-color: #f1f5f9;
+            /* background-color: #f1f5f9; */
             border-radius: var(--radius);
             display: flex;
             align-items: center;
             justify-content: center;
-            border: 2px dashed #cbd5e1;
+            /* border: 2px dashed #cbd5e1; */
             color: var(--text-light);
             font-weight: 500;
         }
@@ -310,6 +290,7 @@
             .hero-image {
                 height: 220px;
                 margin-top: 30px;
+                margin-bottom: 20px;
             }
 
             .project-meta {
@@ -356,7 +337,8 @@
             }
 
             .screen-placeholder {
-                height: 400px;
+                height: auto;
+                margin-top: 10px;
             }
         }
     </style>
@@ -365,7 +347,7 @@
         .update-overlay {
             position: fixed;
             inset: 0;
-            background: rgba(255, 255, 255);
+            background: rgba(2, 6, 23, 0.6);
             display: none;
             align-items: center;
             justify-content: center;
@@ -441,7 +423,7 @@
 
             <div class="col-md-3 text-end">
                 <!-- <button type="button" class="btn btn-outline-primary me-2">Login</button> -->
-                <a href="mailto:foriniyavan@gmail.com" style="text-decoration: none;" type="button"
+                <a href="mailto:iniyavandesigner@outlook.com" style="text-decoration: none;" type="button"
                     class="custom-btn">Say Hello 💬</a>
             </div>
         </header>
@@ -450,7 +432,7 @@
     <header class="container hero">
         <a href="index.html" class="back-btn">← Back to Portfolio</a>
         <h1 class="title text-center" style="font-weight: 600;">PayMe</h1>
-        <p class="subtitle text-center">A Conceptual Digital Wallet Case Study</p>
+        <p class="subtitle text-center">Solving Transactional Anxiety: A UX Case Study on Building Trust in Digital Finance</p>
 
         <div class="project-meta text-center">
             <span class="meta-item">Role: UI/UX Designer</span>
@@ -459,7 +441,10 @@
         </div>
 
         <div class="hero-image">
-            [ Insert Hero Mockup Image Here ]
+            <!-- <img style="border-radius: 30px;" src="image/payme_case_study.png" alt="PayMe App Hero Image" /> -->
+             <img style="border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); width: 100%; max-height: 500px; object-fit: cover;" 
+         src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=2070&auto=format&fit=crop" 
+         alt="PayMe Digital Wallet Mockup" />
         </div>
     </header>
 
@@ -505,16 +490,19 @@
             <div class="grid-3">
                 <div class="user-card">
                     <span class="role">User 1 • Office Employee (29)</span>
+                    <hr>
                     <p>“I always check my balance first. If I don’t see it clearly, I feel unsure.”</p>
                     <div class="insight-box">Insight: Balance visibility is a primary decision trigger.</div>
                 </div>
                 <div class="user-card">
                     <span class="role">User 2 • Freelancer (34)</span>
+                    <hr>
                     <p>“When a payment shows ‘processing’, I keep staring at the screen.”</p>
                     <div class="insight-box">Insight: Unclear status messages create anxiety.</div>
                 </div>
                 <div class="user-card">
                     <span class="role">User 3 • Student (22)</span>
+                    <hr>
                     <p>“There are too many buttons. I just want to pay quickly.”</p>
                     <div class="insight-box">Insight: Too many options increase cognitive load.</div>
                 </div>
@@ -523,37 +511,71 @@
     </section>
 
     <section class="container">
-        <div class="problem-statement">
-            <h2>The Problem</h2>
-            <p>"Users need a simple and transparent wallet experience that allows them to complete payments confidently,
-                without confusion, hesitation, or fear of transaction failure."</p>
+    <div class="problem-statement">
+        <h2 style="font-weight: 800;">The Problem</h2>
+        <p>"Users need a simple and transparent wallet experience that allows them to complete payments confidently, without confusion, hesitation, or fear of transaction failure."</p>
+    </div>
+
+    <!-- <div class="img-placeholder" style="margin-top: 40px; height: auto; min-height: 300px;">
+        
+    </div> -->
+
+    <div class="grid-2" style="margin-top: 60px;">
+        <div>
+            <h3 style="font-weight: 800; margin-bottom: 25px;">Core Pain Points</h3>
+            <ul class="pain-point-list">
+                <li>
+                    <span class="icon">🛑</span> 
+                    <div>
+                        <strong>Cluttered Home Screens</strong>
+                        <p style="margin:0; font-size: 0.95rem; color: var(--text-light);">Feature-heavy interfaces cause visual fatigue and "choice paralysis."</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="icon">⏳</span> 
+                    <div>
+                        <strong>The "Processing" Void</strong>
+                        <p style="margin:0; font-size: 0.95rem; color: var(--text-light);">Lack of micro-feedback during loading leads to payment anxiety.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="icon">😵</span> 
+                    <div>
+                        <strong>Technical Jargon</strong>
+                        <p style="margin:0; font-size: 0.95rem; color: var(--text-light);">Using banking codes instead of human-readable success/error messages.</p>
+                    </div>
+                </li>
+            </ul>
         </div>
 
-        <div class="grid-2" style="margin-top: 60px;">
-            <div>
-                <h3 style="font-weight: 800;">Core Pain Points</h3>
-                <ul class="pain-point-list">
-                    <li><span class="icon">🛑</span> <strong>Cluttered Home Screens:</strong>
-                        <p style="margin:0;">Users feel overwhelmed.</p>
-                    </li>
-                    <li><span class="icon">⏳</span> <strong>Unclear Status:</strong>
-                        <p style="margin:0;">Panic during “processing” states.</p>
-                    </li>
-                    <li><span class="icon">😵</span> <strong>Technical Jargon:</strong>
-                        <p style="margin:0;">Banking terms are confusing.</p>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <h3 style="font-weight: 800;">Design Goals</h3>
-                <ul class="pain-point-list">
-                    <li><span class="icon">🧠</span> <strong>Reduce Cognitive Load:</strong> Keep it simple.</li>
-                    <li><span class="icon">✅</span> <strong>Clear Feedback:</strong> Communicate status clearly.</li>
-                    <li><span class="icon">🤝</span> <strong>Build Trust:</strong> Transparent history.</li>
-                </ul>
-            </div>
+        <div>
+            <h3 style="font-weight: 800; margin-bottom: 25px;">Design Goals</h3>
+            <ul class="pain-point-list">
+                <li style="border-left: 4px solid var(--primary);">
+                    <span class="icon">🧠</span> 
+                    <div>
+                        <strong>Reduce Cognitive Load</strong>
+                        <p style="margin:0; font-size: 0.95rem; color: var(--text-light);">Prioritizing the "Pay" intent over secondary promotional banners.</p>
+                    </div>
+                </li>
+                <li style="border-left: 4px solid var(--primary);">
+                    <span class="icon">✅</span> 
+                    <div>
+                        <strong>Proactive Feedback</strong>
+                        <p style="margin:0; font-size: 0.95rem; color: var(--text-light);">Communicating system status at every millisecond of the transaction.</p>
+                    </div>
+                </li>
+                <li style="border-left: 4px solid var(--primary);">
+                    <span class="icon">🤝</span> 
+                    <div>
+                        <strong>Establishing Trust</strong>
+                        <p style="margin:0; font-size: 0.95rem; color: var(--text-light);">Transparent, real-time ledger updates and humanized copy.</p>
+                    </div>
+                </li>
+            </ul>
         </div>
-    </section>
+    </div>
+</section>
 
     <section class="bg-light">
         <div class="container">
@@ -570,7 +592,8 @@
                     </ul>
                 </div>
                 <div class="img-placeholder">
-                    [ Insert Low-Fidelity Wireframe Image ]
+                    <img src="image/1payme_wireframe.png" alt="Wireframe Sketches"
+                        style="width: 100%; object-fit: cover; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);" />
                 </div>
             </div>
         </div>
@@ -581,10 +604,10 @@
 
         <div class="grid-2" style="margin-bottom: 80px;">
             <div class="img-placeholder">
-                [ Insert Image: Home Screen UI ]
+                <img src="image/final/1_payme.png" width="70%"  alt="PayMe Home Screen" />
             </div>
             <div>
-                <h3>1. Simplified Home Experience</h3>
+                <h3 style="font-weight: 600;">Simplified Home Experience</h3>
                 <p><strong>The Fix:</strong> Balance is shown clearly at the top with one primary action ("Pay").
                     Secondary actions are kept minimal.</p>
                 <p><strong>Impact:</strong> Users immediately understand what to do without searching.</p>
@@ -593,22 +616,22 @@
 
         <div class="grid-2" style="margin-bottom: 80px;">
             <div>
-                <h3>2. Shortened Payment Flow</h3>
+                <h3 style="font-weight: 600;">Shortened Payment Flow</h3>
                 <p><strong>Before:</strong> Home → Multiple Options → Pay → Amount → Method → OTP → Status</p>
                 <p><strong>After:</strong> Home → Pay → Amount → Confirm → Success</p>
                 <p><strong>Impact:</strong> Fewer decisions = faster completion + less stress.</p>
             </div>
             <div class="img-placeholder">
-                [ Insert Image: Payment Flow Diagram ]
+                <img src="image/final/2_payme.png" width="70%" alt="PayMe Home Screen" />
             </div>
         </div>
 
         <div class="grid-2">
             <div class="img-placeholder">
-                [ Insert Image: Success/Fail Screens ]
+                <img src="image/final/3_payme.png" width="70%" alt="PayMe Home Screen" />
             </div>
             <div>
-                <h3>3. Clear Transaction Feedback</h3>
+                <h3 style="font-weight: 600;">Clear Transaction Feedback</h3>
                 <p><strong>The Fix:</strong> Distinct visual states for Success, Pending, and Failed. Used
                     human-friendly messages instead of technical error codes.</p>
                 <p><strong>Impact:</strong> Users feel informed and in control.</p>
@@ -623,15 +646,15 @@
                 screens. The visual language uses blue to signify trust and calmness, with ample whitespace to reduce
                 cognitive load.</p>
 
-            <div class="grid-3">
-                <div class="screen-placeholder img-placeholder">
-                    [ Home Screen ]
+            <div class="grid-3 py-4" style="margin-top: 100px; gap: 30px;">
+                <div class="screen-placeholder img-placeholder" >
+                    <img src="image/final/payme_splash_screen.png" style="box-shadow: 0 20px 40px rgba(0,0,0,0.1); border-radius: 20px;">
                 </div>
                 <div class="screen-placeholder img-placeholder">
-                    [ Scan & Pay ]
+                    <img src="image/final/payme_home_screen.png" style="box-shadow: 0 20px 40px rgba(0,0,0,0.1); border-radius: 20px;">
                 </div>
                 <div class="screen-placeholder img-placeholder">
-                    [ Receipt Screen ]
+                    <img src="image/final/payme_transaction_history.png" style="box-shadow: 0 20px 40px rgba(0,0,0,0.1); border-radius: 20px;">    
                 </div>
             </div>
         </div>
@@ -651,11 +674,9 @@
             <div>
                 <h2 style="font-weight: 800;">Key Learnings</h2>
                 <ul style="padding-left: 20px; line-height: 2;">
-                    <li><strong>Simplicity builds trust:</strong> In Fintech, less is often more.</li>
-                    <li><strong>Emotional comfort is key:</strong> Speed matters, but reassurance matters more when
-                        money is involved.</li>
-                    <li><strong>Clarity over Aesthetics:</strong> A pretty UI fails if the user doesn't know their money
-                        is safe.</li>
+                    <li><strong>Fintech is Emotional:</strong> Designing for money is actually designing for security and peace of mind.</li>
+                    <li><strong>Less is More Profitable:</strong> SA streamlined flow reduces abandoned transactions.</li>
+                    <li><strong>Feedback is Everything:</strong> A user who is informed is a user who stays.</li>
                 </ul>
             </div>
         </div>
@@ -732,17 +753,17 @@
         </div>
     </main>
     <!-- Update-in-progress modal -->
-    <div id="updateOverlay" class="update-overlay" aria-hidden="true">
+    <!-- <div id="updateOverlay" class="update-overlay" aria-hidden="true">
         <div class="update-modal" role="dialog" aria-modal="true" aria-labelledby="updateTitle">
             <h4 id="updateTitle">Page Update in Progress</h4>
             <p>This case study page is currently being updated. Some content may be missing — please check back soon for
                 the full details.</p>
             <div class="modal-actions">
-                <!-- <button id="closeUpdate" class="btn-secondary">Close</button> -->
+                <button id="closeUpdate" class="btn-secondary">Close</button>
                 <a href="index.html" class="btn-primary">Back to Portfolio</a>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <script>
         // Auto-open the update modal on page load
