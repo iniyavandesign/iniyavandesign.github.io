@@ -432,19 +432,22 @@
     <header class="container hero">
         <a href="index.html" class="back-btn">← Back to Portfolio</a>
         <h1 class="title text-center" style="font-weight: 600;">PayMe</h1>
-        <p class="subtitle text-center">Solving Transactional Anxiety: A UX Case Study on Building Trust in Digital Finance</p>
+        <p class="subtitle text-center">Solving Transactional Anxiety: A UX Case Study on Building Trust in Digital
+            Finance</p>
 
         <div class="project-meta text-center">
             <span class="meta-item">Role: UI/UX Designer</span>
             <span class="meta-item">Timeline: 10 Weeks</span>
             <span class="meta-item">Platform: iOS & Android</span>
+            <span class="meta-item">Industry: Financial Services</span>
+
         </div>
 
         <div class="hero-image">
             <!-- <img style="border-radius: 30px;" src="image/payme_case_study.png" alt="PayMe App Hero Image" /> -->
-             <img style="border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); width: 100%; max-height: 500px; object-fit: cover;" 
-         src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=2070&auto=format&fit=crop" 
-         alt="PayMe Digital Wallet Mockup" />
+            <img style="border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); width: 100%; max-height: 500px; object-fit: cover;"
+                src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=2070&auto=format&fit=crop"
+                alt="PayMe Digital Wallet Mockup" />
         </div>
     </header>
 
@@ -511,71 +514,78 @@
     </section>
 
     <section class="container">
-    <div class="problem-statement">
-        <h2 style="font-weight: 800;">The Problem</h2>
-        <p>"Users need a simple and transparent wallet experience that allows them to complete payments confidently, without confusion, hesitation, or fear of transaction failure."</p>
-    </div>
+        <div class="problem-statement">
+            <h2 style="font-weight: 800;">The Problem</h2>
+            <p>"Users need a simple and transparent wallet experience that allows them to complete payments confidently,
+                without confusion, hesitation, or fear of transaction failure."</p>
+        </div>
 
-    <!-- <div class="img-placeholder" style="margin-top: 40px; height: auto; min-height: 300px;">
+        <!-- <div class="img-placeholder" style="margin-top: 40px; height: auto; min-height: 300px;">
         
     </div> -->
 
-    <div class="grid-2" style="margin-top: 60px;">
-        <div>
-            <h3 style="font-weight: 800; margin-bottom: 25px;">Core Pain Points</h3>
-            <ul class="pain-point-list">
-                <li>
-                    <span class="icon">🛑</span> 
-                    <div>
-                        <strong>Cluttered Home Screens</strong>
-                        <p style="margin:0; font-size: 0.95rem; color: var(--text-light);">Feature-heavy interfaces cause visual fatigue and "choice paralysis."</p>
-                    </div>
-                </li>
-                <li>
-                    <span class="icon">⏳</span> 
-                    <div>
-                        <strong>The "Processing" Void</strong>
-                        <p style="margin:0; font-size: 0.95rem; color: var(--text-light);">Lack of micro-feedback during loading leads to payment anxiety.</p>
-                    </div>
-                </li>
-                <li>
-                    <span class="icon">😵</span> 
-                    <div>
-                        <strong>Technical Jargon</strong>
-                        <p style="margin:0; font-size: 0.95rem; color: var(--text-light);">Using banking codes instead of human-readable success/error messages.</p>
-                    </div>
-                </li>
-            </ul>
-        </div>
+        <div class="grid-2" style="margin-top: 60px;">
+            <div>
+                <h3 style="font-weight: 800; margin-bottom: 25px;">Core Pain Points</h3>
+                <ul class="pain-point-list">
+                    <li>
+                        <span class="icon">🛑</span>
+                        <div>
+                            <strong>Cluttered Home Screens</strong>
+                            <p style="margin:0; font-size: 0.95rem; color: var(--text-light);">Feature-heavy interfaces
+                                cause visual fatigue and "choice paralysis."</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="icon">⏳</span>
+                        <div>
+                            <strong>The "Processing" Void</strong>
+                            <p style="margin:0; font-size: 0.95rem; color: var(--text-light);">Lack of micro-feedback
+                                during loading leads to payment anxiety.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="icon">😵</span>
+                        <div>
+                            <strong>Technical Jargon</strong>
+                            <p style="margin:0; font-size: 0.95rem; color: var(--text-light);">Using banking codes
+                                instead of human-readable success/error messages.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
 
-        <div>
-            <h3 style="font-weight: 800; margin-bottom: 25px;">Design Goals</h3>
-            <ul class="pain-point-list">
-                <li style="border-left: 4px solid var(--primary);">
-                    <span class="icon">🧠</span> 
-                    <div>
-                        <strong>Reduce Cognitive Load</strong>
-                        <p style="margin:0; font-size: 0.95rem; color: var(--text-light);">Prioritizing the "Pay" intent over secondary promotional banners.</p>
-                    </div>
-                </li>
-                <li style="border-left: 4px solid var(--primary);">
-                    <span class="icon">✅</span> 
-                    <div>
-                        <strong>Proactive Feedback</strong>
-                        <p style="margin:0; font-size: 0.95rem; color: var(--text-light);">Communicating system status at every millisecond of the transaction.</p>
-                    </div>
-                </li>
-                <li style="border-left: 4px solid var(--primary);">
-                    <span class="icon">🤝</span> 
-                    <div>
-                        <strong>Establishing Trust</strong>
-                        <p style="margin:0; font-size: 0.95rem; color: var(--text-light);">Transparent, real-time ledger updates and humanized copy.</p>
-                    </div>
-                </li>
-            </ul>
+            <div>
+                <h3 style="font-weight: 800; margin-bottom: 25px;">Design Goals</h3>
+                <ul class="pain-point-list">
+                    <li style="border-left: 4px solid var(--primary);">
+                        <span class="icon">🧠</span>
+                        <div>
+                            <strong>Reduce Cognitive Load</strong>
+                            <p style="margin:0; font-size: 0.95rem; color: var(--text-light);">Prioritizing the "Pay"
+                                intent over secondary promotional banners.</p>
+                        </div>
+                    </li>
+                    <li style="border-left: 4px solid var(--primary);">
+                        <span class="icon">✅</span>
+                        <div>
+                            <strong>Proactive Feedback</strong>
+                            <p style="margin:0; font-size: 0.95rem; color: var(--text-light);">Communicating system
+                                status at every millisecond of the transaction.</p>
+                        </div>
+                    </li>
+                    <li style="border-left: 4px solid var(--primary);">
+                        <span class="icon">🤝</span>
+                        <div>
+                            <strong>Establishing Trust</strong>
+                            <p style="margin:0; font-size: 0.95rem; color: var(--text-light);">Transparent, real-time
+                                ledger updates and humanized copy.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <section class="bg-light">
         <div class="container">
@@ -604,7 +614,7 @@
 
         <div class="grid-2" style="margin-bottom: 80px;">
             <div class="img-placeholder">
-                <img src="image/final/1_payme.png" width="70%"  alt="PayMe Home Screen" />
+                <img src="image/final/1_payme.png" width="70%" alt="PayMe Home Screen" />
             </div>
             <div>
                 <h3 style="font-weight: 600;">Simplified Home Experience</h3>
@@ -647,14 +657,17 @@
                 cognitive load.</p>
 
             <div class="grid-3 py-4" style="margin-top: 100px; gap: 30px;">
-                <div class="screen-placeholder img-placeholder" >
-                    <img src="image/final/payme_splash_screen.png" style="box-shadow: 0 20px 40px rgba(0,0,0,0.1); border-radius: 20px;">
+                <div class="screen-placeholder img-placeholder">
+                    <img src="image/final/payme_splash_screen.png"
+                        style="box-shadow: 0 20px 40px rgba(0,0,0,0.1); border-radius: 20px;">
                 </div>
                 <div class="screen-placeholder img-placeholder">
-                    <img src="image/final/payme_home_screen.png" style="box-shadow: 0 20px 40px rgba(0,0,0,0.1); border-radius: 20px;">
+                    <img src="image/final/payme_home_screen.png"
+                        style="box-shadow: 0 20px 40px rgba(0,0,0,0.1); border-radius: 20px;">
                 </div>
                 <div class="screen-placeholder img-placeholder">
-                    <img src="image/final/payme_transaction_history.png" style="box-shadow: 0 20px 40px rgba(0,0,0,0.1); border-radius: 20px;">    
+                    <img src="image/final/payme_transaction_history.png"
+                        style="box-shadow: 0 20px 40px rgba(0,0,0,0.1); border-radius: 20px;">
                 </div>
             </div>
         </div>
@@ -674,8 +687,10 @@
             <div>
                 <h2 style="font-weight: 800;">Key Learnings</h2>
                 <ul style="padding-left: 20px; line-height: 2;">
-                    <li><strong>Fintech is Emotional:</strong> Designing for money is actually designing for security and peace of mind.</li>
-                    <li><strong>Less is More Profitable:</strong> SA streamlined flow reduces abandoned transactions.</li>
+                    <li><strong>Fintech is Emotional:</strong> Designing for money is actually designing for security
+                        and peace of mind.</li>
+                    <li><strong>Less is More Profitable:</strong> SA streamlined flow reduces abandoned transactions.
+                    </li>
                     <li><strong>Feedback is Everything:</strong> A user who is informed is a user who stays.</li>
                 </ul>
             </div>
