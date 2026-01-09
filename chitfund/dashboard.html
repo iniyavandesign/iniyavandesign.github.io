@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - BidChit</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <i class="fa-solid fa-coins"></i> BidChit
+            </div>
+            <nav>
+                <div class="menu-item active" data-section="dashboard">
+                    <i class="fa-solid fa-grid-2"></i> Dashboard
+                </div>
+                <div class="menu-item" data-section="groups">
+                    <i class="fa-solid fa-users-rectangle"></i> My Groups
+                </div>
+                <div class="menu-item" data-section="members">
+                    <i class="fa-solid fa-user-group"></i> Members
+                </div>
+                <div class="menu-item" data-section="auctions">
+                    <i class="fa-solid fa-gavel"></i> Auctions
+                </div>
+                <div class="menu-item" data-section="reports">
+                    <i class="fa-solid fa-file-invoice"></i> Transactions
+                </div>
+                <div class="menu-item" style="margin-top: auto; color: #ef4444;" onclick="location.href='index.html'">
+                    <i class="fa-solid fa-right-from-bracket"></i> Logout
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <div class="top-bar">
+                <div>
+                    <h1 style="font-size: 1.5rem; color: var(--text-main);">Welcome back, Rajesh</h1>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Here's what's happening today.</p>
+                </div>
+                <div class="user-profile">
+                    <div style="text-align: right">
+                        <div style="font-weight: 600; color: var(--text-main);">Rajesh Kumar</div>
+                        <div style="font-size: 0.85rem; color: var(--text-muted)">Foreman</div>
+                    </div>
+                    <div class="avatar">RK</div>
+                </div>
+            </div>
+
+            <!-- Dashboard Section -->
+            <div id="dashboard" class="section-content active">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Active Groups</h3>
+                        <div class="value" id="stat-groups">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Total Pot Value</h3>
+                        <div class="value" id="stat-value">₹0</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Next Auction</h3>
+                        <div class="value" id="stat-auction">-</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Total Members</h3>
+                        <div class="value" id="stat-members">0</div>
+                    </div>
+                </div>
+
+                <div class="section-header-group">
+                    <h2>Recent Groups</h2>
+                    <button class="btn btn-primary" onclick="openAddGroupModal()"><i class="fa-solid fa-plus"></i> New
+                        Group</button>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Group Name</th>
+                                <th>Month</th>
+                                <th>Pot Value</th>
+                                <th>Next Auction</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="groups-table-body">
+                            <!-- JS Generated -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Groups Section -->
+            <div id="groups" class="section-content">
+                <div class="section-header-group">
+                    <h2>All Chit Groups</h2>
+                    <button class="btn btn-primary" onclick="openAddGroupModal()"><i class="fa-solid fa-plus"></i> New
+                        Group</button>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Group Name</th>
+                                <th>Month</th>
+                                <th>Pot Value</th>
+                                <th>Next Auction</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="groups-table-body-full">
+                            <!-- Will share logic with dashboard for now, or fetch separately in real app -->
+                            <!-- Note: current JS populates 'groups-table-body' by ID. I should make sure I reuse the ID or handle duplicate. 
+                                  Simplification: I'll reuse the logic to populate by ID, but since ID must be unique,
+                                  I will just show the same table structure here or let the render function handle class based.
+                                  For this dummy setup, I'll essentially duplicate the table structure or logic.
+                                  Actually, let's keep it simple: The dashboard shows a subset, this shows all.
+                                  For now I'll use the same render function but it targets 'groups-table-body'.
+                                  I will change the ID here to 'groups-list-table' and update JS to render to both or specific.
+                                  Actually, to keep it extremely simple for the prompt "add all function", 
+                                  I will make the render function assume the section is active and update the visible table.
+                             -->
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Hack: reuse the ID for simplicity in this artifact, or better, change JS to target class -->
+            </div>
+
+            <!-- Members Section -->
+            <div id="members" class="section-content">
+                <div class="section-header-group">
+                    <h2>Community Members</h2>
+                    <button class="btn btn-outline" onclick="openMemberModal()"><i class="fa-solid fa-user-plus"></i>
+                        Add Member</button>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Groups</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="members-table-body">
+                            <!-- JS Generated -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Reports Section -->
+            <div id="reports" class="section-content">
+                <div class="section-header-group">
+                    <h2>Recent Transactions</h2>
+                    <button class="btn btn-outline"><i class="fa-solid fa-download"></i> Export CSV</button>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Txn ID</th>
+                                <th>Member</th>
+                                <th>Group</th>
+                                <th>Amount</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="payments-table-body">
+                            <!-- JS Generated -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Auctions Section -->
+            <div id="auctions" class="section-content">
+                <div class="section-header-group">
+                    <h2>Auction Center</h2>
+                    <button class="btn btn-primary" onclick="alert('Schedule New Auction')"><i
+                            class="fa-solid fa-calendar-plus"></i> Schedule Auction</button>
+                </div>
+
+                <!-- Live Now Section -->
+                <div style="margin-bottom: 3rem;">
+                    <h3 style="margin-bottom: 1rem; color: var(--text-main); font-size: 1.1rem;">🔴 Live Now</h3>
+                    <div class="auction-live-card">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                            <div>
+                                <h4 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--text-main);">Business
+                                    Growth B - Month 2/12</h4>
+                                <div style="display: flex; gap: 2rem; color: var(--text-muted);">
+                                    <span><i class="fa-solid fa-sack-dollar"></i> Pot: ₹1,00,000</span>
+                                    <span><i class="fa-solid fa-users"></i> 12 Members Online</span>
+                                </div>
+                            </div>
+                            <div style="text-align: right;">
+                                <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary-color);">Current
+                                    Bid: ₹4,500</div>
+                                <div style="font-size: 0.8rem; color: var(--text-muted);">by Anita Desai</div>
+                            </div>
+                            <button class="btn btn-primary" onclick="openAuctionModal()">Enter Auction Room</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Upcoming Section -->
+                <h3>Upcoming Schedule</h3>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Group</th>
+                                <th>Date & Time</th>
+                                <th>Pot Value</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="auctions-table-body">
+                            <!-- JS Populated -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Auction Room Modal (Simulation) -->
+    <div id="auction-room-modal" class="modal-overlay">
+        <div class="dashboard-modal" style="width: 800px; max-width: 90vw;">
+            <div
+                style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 1rem;">
+                <div>
+                    <h2 style="margin: 0; color: var(--text-main);">Business Growth B</h2>
+                    <span style="font-size: 0.8rem; color: var(--primary-color);">● Live Auction In Progress</span>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: 700; font-size: 1.2rem;">⏱ 00:45</div>
+                    <span style="font-size: 0.8rem; color: var(--text-muted);">Time Remaining</span>
+                </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
+                <!-- Bid History -->
+                <div>
+                    <h4 style="margin-bottom: 0.5rem; color: var(--text-muted);">Live Bids</h4>
+                    <div class="bid-history-list" id="bid-history">
+                        <div class="bid-item">
+                            <span>Anita Desai</span>
+                            <span class="bid-amount">₹4,500</span>
+                        </div>
+                        <div class="bid-item">
+                            <span>Rajesh Kumar</span>
+                            <span class="bid-amount">₹4,200</span>
+                        </div>
+                        <div class="bid-item">
+                            <span>Magesh</span>
+                            <span class="bid-amount">₹4,000</span>
+                        </div>
+                        <div class="bid-item">
+                            <span>System</span>
+                            <span style="color: var(--text-muted);">Auction Started</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Current Status -->
+                <!-- Current Status -->
+                <div
+                    style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+                    <div style="margin-bottom: 2rem;">
+                        <h4 style="color: var(--text-muted); margin-bottom: 0.5rem;">Current Winning Bid</h4>
+                        <div id="current-bid-display"
+                            style="font-size: 3rem; font-weight: 800; color: var(--primary-color);">₹4,500</div>
+                        <div id="current-bidder-display" style="color: var(--text-main); font-weight: 500;">Held by:
+                            Anita Desai</div>
+                    </div>
+
+                    <div style="width: 100%; margin-bottom: 2rem; display: flex; gap: 0.5rem;">
+                        <input type="number" id="manual-bid-amount" placeholder="Enter Amount"
+                            style="padding: 0.75rem; border: 1px solid var(--glass-border); border-radius: 8px; width: 100%; outline: none;">
+                        <button class="btn btn-primary" onclick="placeManualBid()">Bid</button>
+                    </div>
+
+                    <button class="btn btn-outline" style="width: 100%; margin-bottom: 1rem;">Pause Auction</button>
+                    <button class="btn btn-primary" style="width: 100%;" onclick="closeModals()">End Auction</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div id="add-group-modal" class="modal-overlay">
+        <div class="dashboard-modal">
+            <h2 style="margin-bottom: 1.5rem">Create New Chit Group</h2>
+            <form id="add-group-form">
+                <div class="form-group">
+                    <label>Group Name</label>
+                    <input type="text" id="group-name" placeholder="e.g. Savings Circle A" required>
+                </div>
+                <div class="form-group">
+                    <label>Total Pot Value (₹)</label>
+                    <input type="number" id="group-value" placeholder="50000" required>
+                </div>
+                <div class="form-group">
+                    <label>Duration (Months)</label>
+                    <select>
+                        <option>12 Months</option>
+                        <option selected>20 Months</option>
+                        <option>30 Months</option>
+                    </select>
+                </div>
+                <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                    <button type="button" class="btn btn-outline" onclick="closeModals()">Cancel</button>
+                    <button type="submit" class="btn btn-primary" style="flex: 1">Create Group</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Member Modal -->
+    <div id="member-modal" class="modal-overlay">
+        <div class="dashboard-modal">
+            <h2 id="member-modal-title" style="margin-bottom: 1.5rem">Add New Member</h2>
+            <form id="member-form">
+                <input type="hidden" id="member-id">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" id="member-name" placeholder="e.g. John Doe" required>
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" id="member-email" placeholder="john@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" id="member-phone" placeholder="9876543210" required>
+                </div>
+                <div class="form-group">
+                    <label>Assign Group</label>
+                    <select id="member-group-select" required>
+                        <option value="">Select a Group...</option>
+                        <!-- Populated by JS -->
+                    </select>
+                </div>
+                <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                    <button type="button" class="btn btn-outline" onclick="closeModals()">Cancel</button>
+                    <button type="submit" class="btn btn-primary" style="flex: 1">Save Member</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Group Details Modal -->
+    <div id="group-details-modal" class="modal-overlay">
+        <div class="dashboard-modal" style="width: 700px; max-width: 90vw;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem">
+                <h2 id="modal-group-name" style="margin: 0">Group Details</h2>
+                <i class="fa-solid fa-xmark" onclick="closeModals()"
+                    style="cursor: pointer; font-size: 1.5rem; color: var(--text-muted)"></i>
+            </div>
+
+            <div class="stats-grid" style="grid-template-columns: 1fr 1fr 1fr; margin-bottom: 2rem;">
+                <div class="stat-card" style="padding: 1rem;">
+                    <h3 style="font-size: 0.8rem">Pot Value</h3>
+                    <div class="value" id="modal-group-value" style="font-size: 1.5rem">₹0</div>
+                </div>
+                <div class="stat-card" style="padding: 1rem;">
+                    <h3 style="font-size: 0.8rem">Next Auction</h3>
+                    <div class="value" id="modal-group-date" style="font-size: 1.5rem">-</div>
+                </div>
+                <div class="stat-card" style="padding: 1rem;">
+                    <h3 style="font-size: 0.8rem">Status</h3>
+                    <div class="value" id="modal-group-status" style="font-size: 1.5rem">-</div>
+                </div>
+            </div>
+
+            <h3 style="margin-bottom: 1rem; font-size: 1.1rem;">Group Members</h3>
+            <div class="table-container" style="max-height: 300px; overflow-y: auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Member</th>
+                            <th>Phone</th>
+                            <th>Role</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="modal-members-body">
+                        <!-- JS Populated -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div style="margin-top: 2rem; text-align: right;">
+                <button class="btn btn-outline" onclick="closeModals()">Close</button>
+                <button class="btn btn-primary">Start Auction</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+
+</html>

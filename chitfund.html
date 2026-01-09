@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>PayMe Case Study | Iniyavan Design</title>
+    <title>BitChit Case Study | Iniyavan Design</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -248,6 +248,40 @@
             flex-shrink: 0;
         }
 
+        /* Target Users grid */
+        .target-user-grid {
+            margin-top: 16px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .target-user-card {
+            background: var(--white);
+            border: 1px solid #e6eef8;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: var(--shadow);
+        }
+
+        .target-user-card h6 {
+            margin: 0 0 8px 0;
+            font-weight: 700;
+            color: var(--secondary);
+        }
+
+        .target-user-card ul {
+            margin: 0;
+            padding-left: 20px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 900px) {
+            .target-user-grid {
+                grid-template-columns: 1fr;
+            }
+        }
 
 
         /* =========================================
@@ -371,15 +405,14 @@
 
     <header class="container hero">
         <a href="index.html" class="back-btn" style="color: black;">← Back to Portfolio</a>
-        <h1 class="title text-center" style="font-weight: 600;">PayMe</h1>
-        <p class="subtitle text-center">Solving Transactional Anxiety: A UX Case Study on Building Trust in Digital
-            Finance</p>
+        <h1 class="title text-center" style="font-weight: 600;">Bid Chitu</h1>
+        <p class="subtitle text-center">Simple Community Savings</p>
 
         <div class="project-meta text-center">
-            <span class="meta-item">Role: UI/UX Designer</span>
-            <span class="meta-item">Timeline: 10 Weeks</span>
-            <span class="meta-item">Platform: iOS & Android</span>
-            <span class="meta-item">Industry: Fintech</span>
+            <span class="meta-item">Role: UX Research, UX Strategy, UI Design, Prototyping</span>
+            <span class="meta-item">Timeline: 8 Weeks</span>
+            <span class="meta-item">Platform: Website</span>
+            <span class="meta-item">Concept: Auction-based digital chit fund system</span>
 
         </div>
 
@@ -395,26 +428,41 @@
         <div class="grid-2 pt-4">
             <div>
                 <h2 style="font-weight: 800;">Project Overview</h2>
-                <p>PayMe is a conceptual digital wallet app designed to simplify everyday payments and reduce user
-                    anxiety during transactions.</p>
-                <p><strong>Disclaimer:</strong> The app is not live; the goal of this project was to demonstrate
-                    research-driven UX thinking, specifically exploring how clarity and simplicity can build trust in
-                    financial experiences.</p>
+                <p>BidChit is a digital platform that modernizes traditional community chit funds using an auction
+                    ticket model, making savings transparent, secure, and easy to manage online.</p>
             </div>
             <div>
-                <h2 style="font-weight: 800;">Why This Case Study?</h2>
-                <p>Digital wallet apps are widely used, yet many users still feel stress and uncertainty while making
-                    payments. I wanted to solve the anxiety of "Did my money go through?" through better UI/UX.</p>
+                <h2 style="font-weight: 800;">Problem Statement</h2>
+                <p>Traditional chit funds face several challenges:</p>
+                <ul style="line-height: 0.5rem;">
+                    <p>❌ Lack of transparency in auctions</p>
+                    <p>❌ Manual tracking of payments and members</p>
+                    <p>❌ Trust issues among participants</p>
+                    <p>❌ No real-time visibility into bids and payouts</p>
+                    <p>❌ Poor accessibility for younger, digital-first users</p>
+                </ul>
+                <p style="font-weight: 500;">Users needed a simple, transparent, and trustworthy way to participate in
+                    community savings online.</p>
+
             </div>
         </div>
     </section>
 
     <section class="bg-light">
         <div class="container">
-            <h2 style="font-weight: 800;">Research Approach</h2>
-            <p>I focused on qualitative and behavioral research to understand the "why" behind user anxiety.</p>
+            <h2 style="font-weight: 800;">Solution</h2>
+            <p>BidChit introduces a <b>digital auction ticket system</b> that allows users to:</p>
 
-            <div class="grid-3" style="margin-bottom: 40px;">
+            <ul>
+                <li>Join verified savings groups</li>
+                <li>Participate in monthly auctions online</li>
+                <li>Track bids, payouts, and contributions in real time</li>
+                <li>Maintain trust through clear data visibility</li>
+            </ul>
+            <p><b>Core idea:</b></p>
+            <p style="font-style: italic;">Bring clarity, fairness, and simplicity to community savings.</p>
+
+            <!-- <div class="grid-3" style="margin-bottom: 40px;">
                 <div class="stat-card">
                     <span class="stat-number">12</span>
                     <p>1-on-1 Interviews</p>
@@ -427,9 +475,9 @@
                     <span class="stat-number">3</span>
                     <p>Competitor Audits</p>
                 </div>
-            </div>
+            </div> -->
 
-            <h3 style="font-weight: 800;">User Stories & Insights</h3>
+            <!-- <h3 style="font-weight: 800;">User Stories & Insights</h3>
             <div class="grid-3">
                 <div class="user-card">
                     <span class="role">User 1 • Office Employee (29)</span>
@@ -449,9 +497,53 @@
                     <p>“There are too many buttons. I just want to pay quickly.”</p>
                     <div class="insight-box">Insight: Too many options increase cognitive load.</div>
                 </div>
+            </div> -->
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="grid-2 pt-4">
+            <div>
+                <h2 style="font-weight: 800;">Target Users</h2>
+                <div class="target-user-grid">
+                    <div class="target-user-card">
+                        <h6 style="margin-bottom: 8px;">Primary Users</h6>
+                        <ul>
+                            <li>Salaried employees</li>
+                            <li>Small business owners</li>
+                            <li>First-time investors</li>
+                            <li>Self-help groups</li>
+                        </ul>
+                    </div>
+                    <div class="target-user-card">
+                        <h6 style="margin-bottom: 8px;">Secondary Users</h6>
+                        <ul>
+                            <li>Chit fund organizers</li>
+                            <li>Community group leaders</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2 style="font-weight: 800;">User Goals & Pain Points</h2>
+                <h6>Goals</h6>
+                <ul>
+                    <li>Save money consistently</li>
+                    <li>Get lump-sum access when needed</li>
+                    <li>Understand auction outcomes clearly</li>
+                </ul>
+                <h6>Pain Points</h6>
+                <ul>
+                    <li>Confusing manual processes</li>
+                    <li>No digital proof of transactions</li>
+                    <li>Fear of fraud or mismanagement</li>
+                </ul>
+
             </div>
         </div>
     </section>
+
+
 
     <section class="container">
         <div class="problem-statement">

@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BidChit - Smart Chit Fund Management</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Background removed for cleaner look -->
+
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-coins" style="color: var(--primary-color)"></i> BidChit
+        </div>
+        <div class="nav-links">
+            <a href="#how-it-works">How it Works</a>
+            <a href="#features">Features</a>
+            <!-- <button class="btn btn-outline" onclick="downloadDesign()"><i class="fa-solid fa-download"></i> Save
+                Design</button> -->
+            <button class="btn btn-secondary" onclick="window.location.href='dashboard.html'">Login</button>
+            <button class="btn btn-primary" onclick="window.location.href='dashboard.html'">Get Started</button>
+        </div>
+    </nav>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="badge">Simple Community Savings</div>
+                <h1>The Easiest Way to <br><span class="gradient-text">Save & Borrow</span></h1>
+                <p>Join a trusted group. Save money monthly. Borrow the full pot when you need it.</p>
+                <div class="cta-group">
+                    <button class="btn btn-primary btn-lg" onclick="window.location.href='dashboard.html'">Start Saving
+                        Now</button>
+                    <button class="btn btn-outline btn-lg" onclick="location.href='#how-it-works'">See How It
+                        Works</button>
+                </div>
+
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Transparent</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">Instant</span>
+                        <span class="stat-label">Calculations</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">Secure</span>
+                        <span class="stat-label">Bidding</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="glass-card main-card">
+                    <div class="card-header">
+                        <div>
+                            <h3>Monthly Pot</h3>
+                            <span class="sub-text">Active Cycle</span>
+                        </div>
+                        <div class="icon-box">
+                            <i class="fa-solid fa-sack-dollar"></i>
+                        </div>
+                    </div>
+                    <div class="card-amount">₹500,000</div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 75%"></div>
+                    </div>
+                    <div class="card-footer">
+                        <span>15 Members Contributed</span>
+                        <span class="status-badge">Bidding Open</span>
+                    </div>
+                </div>
+
+                <div class="glass-card float-card card-1">
+                    <div class="icon-circle"><i class="fa-solid fa-gavel"></i></div>
+                    <div>
+                        <h4>Current Bid</h4>
+                        <p>₹12,000 Discount</p>
+                    </div>
+                </div>
+
+                <div class="glass-card float-card card-2">
+                    <div class="icon-circle" style="background: var(--secondary-color)"><i
+                            class="fa-solid fa-users"></i></div>
+                    <div>
+                        <h4>New Member</h4>
+                        <p>Joined Group A</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How it Works Section -->
+        <section id="how-it-works">
+            <div class="section-header">
+                <h2>How Does It <span class="gradient-text">Work?</span></h2>
+                <p>It's just 4 simple steps to manage your money with friends.</p>
+            </div>
+
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <div class="step-icon">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <h3>1. Join a Group</h3>
+                    <p>Join a group of 10-20 people. Everyone agrees to pay the same amount every month.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <div class="step-icon">
+                        <i class="fa-solid fa-hand-holding-dollar"></i>
+                    </div>
+                    <h3>2. Pay Monthly</h3>
+                    <p>Collect money from everyone. Example: 10 people pay ₹1000 = ₹10,000 Total Pot.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <div class="step-icon">
+                        <i class="fa-solid fa-hand-point-up"></i>
+                    </div>
+                    <h3>3. Need Money? Ask!</h3>
+                    <p>If you need the full amount, you can "bid" for it. The person who needs it most gets it.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">04</div>
+                    <div class="step-icon">
+                        <i class="fa-solid fa-piggy-bank"></i>
+                    </div>
+                    <h3>4. Everyone Saves</h3>
+                    <p>The "discount" from the winner is shared with everyone else. This lowers your next payment!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features">
+            <div class="section-header">
+                <h2>Why Choose <span class="gradient-text">BidChit</span>?</h2>
+                <p>Modern tools made simple for everyone.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-calculator"></i>
+                    </div>
+                    <div>
+                        <h3>No Math Required</h3>
+                        <p>We do all the calculations for you. Know exactly what to pay and what you get.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-file-invoice"></i>
+                    </div>
+                    <div>
+                        <h3>Digital Passbook</h3>
+                        <p>See all your payments and history in one place. No more lost paper records.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                    </div>
+                    <div>
+                        <h3>Bid from Phone</h3>
+                        <p>Participate in the money auction from your phone. Safe, secure, and easy.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-user-check"></i>
+                    </div>
+                    <div>
+                        <h3>Easy to Manage</h3>
+                        <p>Whether you run the group or just save, our tools make it effortless.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </section>
+
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing">
+            <div class="section-header">
+                <h2>Simple, Transparent <span class="gradient-text">Pricing</span></h2>
+                <p>Choose the plan that fits your financial goals.</p>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- Free Plan -->
+                <div class="pricing-card">
+                    <div class="plan-name">Saver</div>
+                    <div class="price">₹0<span>/mo</span></div>
+                    <p class="plan-desc">Perfect for individuals joining a group.</p>
+                    <ul class="features-list">
+                        <li><i class="fa-solid fa-check"></i> Join up to 3 Groups</li>
+                        <li><i class="fa-solid fa-check"></i> Basic Dashboard</li>
+                        <li><i class="fa-solid fa-check"></i> Secure Bidding</li>
+                        <li><i class="fa-solid fa-check"></i> Dividend Tracking</li>
+                    </ul>
+                    <button class="btn btn-outline full-width" onclick="window.location.href='dashboard.html'">Get
+                        Started</button>
+                </div>
+
+                <!-- Pro Plan -->
+                <div class="pricing-card featured">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="plan-name">Foreman Basic</div>
+                    <div class="price">₹999<span>/mo</span></div>
+                    <p class="plan-desc">For managing small chit fund communities.</p>
+                    <ul class="features-list">
+                        <li><i class="fa-solid fa-check"></i> Manage 5 Active Groups</li>
+                        <li><i class="fa-solid fa-check"></i> Auto-Calculations</li>
+                        <li><i class="fa-solid fa-check"></i> Payment Reminders</li>
+                        <li><i class="fa-solid fa-check"></i> Basic Reports</li>
+                        <li><i class="fa-solid fa-check"></i> Priority Support</li>
+                    </ul>
+                    <button class="btn btn-primary full-width" onclick="window.location.href='dashboard.html'">Start
+                        Free Trial</button>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="pricing-card">
+                    <div class="plan-name">Foreman Pro</div>
+                    <div class="price">₹2,499<span>/mo</span></div>
+                    <p class="plan-desc">For professional chit fund agencies.</p>
+                    <ul class="features-list">
+                        <li><i class="fa-solid fa-check"></i> Unlimited Groups</li>
+                        <li><i class="fa-solid fa-check"></i> Advanced Analytics</li>
+                        <li><i class="fa-solid fa-check"></i> White-label App</li>
+                        <li><i class="fa-solid fa-check"></i> Audit Logs</li>
+                        <li><i class="fa-solid fa-check"></i> 24/7 Dedicated Support</li>
+                    </ul>
+                    <button class="btn btn-outline full-width" onclick="openModal('register')">Contact Sales</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section id="reviews">
+            <div class="section-header">
+                <h2>Trusted by <span class="gradient-text">Thousands</span></h2>
+                <p>See what our community members are saying about their saving journey.</p>
+            </div>
+
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <h4>Magesh</h4>
+                            <span class="role">Subscriber</span>
+                        </div>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <p>"BidChit transformed how I save. The transparency in bidding is unmatched, and I got my lump
+                        sum safely when I needed it for my business expansion!"</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <h4>Rajesh Kumar</h4>
+                            <span class="role">Foreman</span>
+                        </div>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                    </div>
+                    <p>"Managing 5 different groups used to be a nightmare of paperwork. Now, everything is automated.
+                        Calculated dividends in seconds. Highly recommended!"</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <h4>Anita Desai</h4>
+                            <span class="role">Subscriber</span>
+                        </div>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <p>"I was skeptical about digital chits, but the security transparency here changed my mind. The
+                        dashboard is so easy to use even for my parents."</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <i class="fa-solid fa-coins" style="color: var(--primary-color)"></i> BidChit
+                </div>
+                <p>Empowering communities with secure, transparent, and modern financial growth solutions.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="#how-it-works">How it Works</a>
+                <a href="#features">Features</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#" onclick="openModal('login')">Login</a>
+            </div>
+
+            <div class="footer-links">
+                <h4>Legal</h4>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Chit Fund Act</a>
+                <a href="#">Security</a>
+            </div>
+
+            <div class="footer-newsletter">
+                <h4>Stay Updated</h4>
+                <p>Get the latest updates and financial tips.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 BidChit. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="auth-modal" class="modal">
+        <div class="modal-content glass-panel">
+            <span class="close-modal">&times;</span>
+            <div class="auth-tabs">
+                <div class="tab active" data-tab="login">Login</div>
+                <div class="tab" data-tab="register">Register</div>
+            </div>
+
+            <form id="login-form" class="auth-form active">
+                <div class="input-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="hello@example.com" required>
+                </div>
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="btn btn-primary full-width">Sign In</button>
+            </form>
+
+            <form id="register-form" class="auth-form">
+                <div class="input-group">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="John Doe" required>
+                </div>
+                <div class="input-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="hello@example.com" required>
+                </div>
+                <div class="input-group">
+                    <label>Role</label>
+                    <select class="styled-select">
+                        <option value="subscriber">Subscriber</option>
+                        <option value="foreman">Foreman</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="btn btn-primary full-width">Create Account</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
