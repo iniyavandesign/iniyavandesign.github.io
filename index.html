@@ -30,6 +30,7 @@
 </head>
 
 <body class="profile__border">
+  <canvas id="bg-3d"></canvas>
   <!-- <img class="image-back" src="image/bg_top.png" /> -->
   <div class="container nav-behind">
     <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4">
@@ -43,16 +44,36 @@
     </header>
   </div>
 
-  <div class="container">
-    <div class="col-md-7 mt-12 px-8 py-4 my-5 text-left">
-      <!-- <img class="d-block mx-auto mb-4" src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"> -->
-      <h1 class="one lead mb-5 mx-auto fot-la display-6 text-body-emphasis" style="line-height: 1.5;"><b
-          class="fw-bold">Iniyavan Mageshwaran</b> is a designer from Tamil Nadu 🌱, working as a <b class="fw-bold">Senior UI/UX Designer</b> at <a class="fw-bold"
-          style="text-decoration: none; color: black;" href="https://nithra.mobi" target="_blank">Nithra Apps 💻</a>, where he enjoys solving real user problems through thoughtful design. 🧠
-      </h1>
+  <div class="container hero-section d-flex align-items-center position-relative" style="min-height: 85vh;">
+    <div class="row w-100">
+      <div class="col-lg-12">
+        <h1 class="hero-title-large mb-4 one" style="line-height: 0.9;">
+          <span class="d-block display-1 fw-bold">Creating</span>
+          <span class="d-block display-1 fw-bold text-secondary"
+            style="margin-left: 1.5em; opacity: 0.7;">Meaningful</span>
+          <span class="d-block display-1 fw-bold" style="margin-left: 0.5em;">Digital <span
+              class="fst-italic font-serif" style="font-family: serif;">Stories.</span></span>
+        </h1>
+        <p class="mt-5 ms-2 lead text-secondary two" style="max-width: 480px; font-weight: 400;">
+          I'm Iniyavan Mageshwaran, a Senior Product Designer sculpting interfaces that speak to humans, not just users.
+        </p>
+        <div class="d-flex align-items-center gap-4 mt-5 ms-2 three">
+          <a href="#work"
+            class="link-dark text-decoration-none fw-bold border-bottom border-2 border-dark pb-1 text-uppercase small"
+            style="letter-spacing: 1px;">Selected Works</a>
+          <span class="text-muted">•</span>
+          <a href="#about"
+            class="link-dark text-decoration-none fw-bold border-bottom border-2 border-dark pb-1 text-uppercase small"
+            style="letter-spacing: 1px;">About Me</a>
+        </div>
+      </div>
     </div>
+
   </div>
-  <main class="container two">
+  <main class="container two" id="work">
+    <div class="col-lg-12">
+      <p class="text-uppercase small text-secondary mb-5" style="letter-spacing: 2px;"></p>
+    </div>
     <div class="col-md-12 my-4">
       <a href="payme.html" style="text-decoration: none;">
         <div class="big-card-wrapper">
@@ -88,8 +109,8 @@
 
           <!-- RIGHT CONTENT -->
           <div class="big-card-content">
-            <h4 class="mb-3" style="color: black;">BitChit</h4>
-            <p> BidChit is a digital platform that modernizes traditional community chit funds using an auction ticket
+            <h4 class="mb-3" style="color: black;">BidChitu</h4>
+            <p> BidChitu is a digital platform that modernizes traditional community chit funds using an auction ticket
               model, making savings transparent, secure, and easy to manage online.
             </p>
             <span class="view-text">View Demo →</span>
@@ -101,11 +122,11 @@
   </main>
 
   <main>
-    <div class="container col-xxl-8 px-4 py-5 section_1">
+    <div class="container col-xxl-8 px-4 py-5 section_1" id="about">
       <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
         <div class="col-md-12 col-lg-6">
-          <img src="image/final/home.png" class="four d-block mx-lg-auto img-fluid"
-            alt="Bootstrap Themes" loading="lazy">
+          <img src="image/final/home.png" class="four d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"
+            loading="lazy">
         </div>
         <div class="col-lg-6">
           <h1 class="two display-5 fw-bold lh-1 mb-3">About Me</h1>
@@ -239,6 +260,11 @@
     // }
   </script>
 
+
+  <div class="cursor"></div>
+  <div class="cursor2"></div>
+
+  <script type="module" src="js/three-animation.js"></script>
 
   <!-- JAVASCRIPT DECLARATION -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
