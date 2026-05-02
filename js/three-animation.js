@@ -1,69 +1,81 @@
-
 import * as THREE from 'https://cdn.skypack.dev/three@0.129.0/build/three.module.js';
 
-const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+// Wait for DOM layout to resolve so canvas dimensions are correct
+window.addEventListener('load', () => {
+  const canvas = document.querySelector('#hero-3d');
+  if (!canvas) return;
 
-const renderer = new THREE.WebGLRenderer({
-    canvas: document.querySelector('#bg-3d'),
+  const container = document.querySelector('.hero-bg-canvas');
+  const W = container.clientWidth || window.innerWidth;
+  const H = container.clientHeight || window.innerHeight;
+
+  // Scene + Camera
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(60, W / H, 0.1, 1000);
+  camera.position.setZ(28);
+
+  // Renderer (transparent background)
+  const renderer = new THREE.WebGLRenderer({
+    canvas: canvas,
     alpha: true,
     antialias: true
-});
+  });
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  renderer.setSize(W, H);
 
-renderer.setPixelRatio(window.devicePixelRatio);
-renderer.setSize(window.innerWidth, window.innerHeight);
-camera.position.setZ(30);
-
-// Create a Torus Knot
-const geometry = new THREE.TorusKnotGeometry(10, 3, 100, 16);
-const material = new THREE.MeshStandardMaterial({
-    color: 0x000000,
+  // Wireframe Torus Knot — matches the screenshot design
+  const geometry = new THREE.TorusKnotGeometry(9, 2.8, 120, 18);
+  const material = new THREE.MeshStandardMaterial({
+    color: 0x1a1a1a,
     wireframe: true,
     transparent: true,
-    opacity: 0.1
-});
-const torusKnot = new THREE.Mesh(geometry, material);
+    opacity: 0.02
+  });
+  const torusKnot = new THREE.Mesh(geometry, material);
+  scene.add(torusKnot);
 
-scene.add(torusKnot);
+  // Lights
+  const pointLight = new THREE.PointLight(0xffffff, 1);
+  pointLight.position.set(10, 10, 10);
+  const ambientLight = new THREE.AmbientLight(0xffffff, 0.8);
+  scene.add(pointLight, ambientLight);
 
-// Add Lights
-const pointLight = new THREE.PointLight(0xffffff);
-pointLight.position.set(5, 5, 5);
+  // Scroll reactive velocity
+  let scrollVelocity = 0;
+  let lastScrollY = window.scrollY;
 
-const ambientLight = new THREE.AmbientLight(0xffffff);
-scene.add(pointLight, ambientLight);
+  window.addEventListener('scroll', () => {
+    const delta = window.scrollY - lastScrollY;
+    scrollVelocity = delta * 0.002;
+    lastScrollY = window.scrollY;
+    // Subtle zoom-out effect on scroll
+    camera.position.z = 28 + window.scrollY * 0.008;
+  });
 
-// Animation Loop
-function animate() {
+  // Animation loop
+  function animate() {
     requestAnimationFrame(animate);
 
-    torusKnot.rotation.x += 0.003;
-    torusKnot.rotation.y += 0.003;
-    torusKnot.rotation.z += 0.003;
+    // Base slow rotation + scroll boost
+    torusKnot.rotation.x += 0.003 + scrollVelocity;
+    torusKnot.rotation.y += 0.003 + scrollVelocity * 1.5;
+    torusKnot.rotation.z += 0.002;
+
+    // Dampen scroll velocity
+    scrollVelocity *= 0.92;
 
     renderer.render(scene, camera);
-}
+  }
 
-// Scroll Animation
-function moveCamera() {
-    const t = document.body.getBoundingClientRect().top;
+  animate();
 
-    torusKnot.rotation.x += 0.005;
-    torusKnot.rotation.y += 0.0075;
-    torusKnot.rotation.z += 0.005;
-
-    camera.position.z = t * -0.01 + 30;
-    camera.position.x = t * -0.0002;
-    camera.rotation.y = t * -0.0002;
-}
-
-document.body.onscroll = moveCamera;
-moveCamera(); // Initial call
-animate();
-
-// Resize Handler
-window.addEventListener('resize', () => {
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    camera.aspect = window.innerWidth / window.innerHeight;
+  // Responsive resize
+  window.addEventListener('resize', () => {
+    const nW = container.clientWidth;
+    const nH = container.clientHeight;
+    if (nW === 0 || nH === 0) return;
+    renderer.setSize(nW, nH);
+    camera.aspect = nW / nH;
     camera.updateProjectionMatrix();
+  });
 });

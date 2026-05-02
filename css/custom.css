@@ -480,6 +480,15 @@ h6 {
     font-size: 6rem;
     letter-spacing: -0.04em;
   }
+
+  /* Hero stagger indentation — desktop only */
+  .hero-indent-md {
+    margin-left: 1.5em;
+  }
+
+  .hero-indent-sm {
+    margin-left: 0.5em;
+  }
 }
 
 /* SCROLL INDICATOR */
@@ -528,4 +537,289 @@ h6 {
 
 .ls-2 {
   letter-spacing: 2px;
+}
+
+/* NAME HIGHLIGHT */
+.name-highlight {
+  color: #000;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  background: linear-gradient(#000, #000) no-repeat;
+  background-size: 0% 1.5px;
+  background-position: left bottom;
+  transition: background-size 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.name-highlight.revealed {
+  background-size: 100% 1.5px;
+}
+
+/* =============================================
+   RECRUITER-FOCUSED COMPONENTS
+   ============================================= */
+
+/* "Open to Opportunities" badge */
+.recruiter-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  background-color: #f0fdf4;
+  border: 1px solid #86efac;
+  color: #15803d;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* Quick stats row in hero */
+.recruiter-stat {
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid #000;
+  padding-left: 16px;
+}
+
+.recruiter-stat-num {
+  font-size: 1.75rem;
+  font-weight: 800;
+  line-height: 1;
+  color: #000;
+}
+
+.recruiter-stat-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #666;
+  margin-top: 4px;
+}
+
+/* Skills strip below hero */
+.skills-strip {
+  padding: 40px 0 20px;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-pill {
+  padding: 8px 18px;
+  border: 1px solid #e5e7eb;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #374151;
+  background: #fff;
+  transition: all 0.2s ease;
+}
+
+.skill-pill:hover {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+/* Case study tags on project cards */
+.case-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  background: #f3f4f6;
+  color: #374151;
+  font-size: 0.72rem;
+  font-weight: 600;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* About skills highlight row */
+.recruiter-skills-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.recruiter-skill-item {
+  padding: 12px 16px;
+  border: 1px solid #e5e7eb;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #111;
+  background: #fafafa;
+}
+
+@media (max-width: 480px) {
+  .recruiter-skills-row {
+    grid-template-columns: 1fr;
+  }
+  .recruiter-stat-num {
+    font-size: 1.4rem;
+  }
+}
+
+/* =============================================
+   MOBILE RESPONSIVE FIXES
+   Breakpoints: 768px (tablet), 480px (phone)
+   ============================================= */
+
+/* Tablet and below */
+@media (max-width: 768px) {
+
+  /* Hero section: remove stagger indentation that causes horizontal overflow */
+  .hero-title-large span,
+  h1 .display-1 {
+    margin-left: 0 !important;
+  }
+
+  /* Shrink hero heading */
+  .display-1 {
+    font-size: 2.8rem !important;
+    letter-spacing: -0.02em;
+  }
+
+  /* Hero section padding */
+  div[style*="min-height: 85vh"] {
+    min-height: auto !important;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  /* Cards: stack vertically */
+  .big-card-wrapper {
+    flex-direction: column;
+  }
+
+  .big-card-image {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .big-card-content {
+    width: 100%;
+    padding: 24px;
+  }
+
+  .big-card-content h4 {
+    font-size: 1.5rem;
+  }
+
+  /* Case study grids collapse */
+  .grid-2 {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  /* Scroll indicator: hide on small screens */
+  .scroll-indicator {
+    display: none;
+  }
+
+  /* Wave container smaller on mobile */
+  .waves-container {
+    height: 10vh;
+  }
+
+  /* Section padding reduction for payme */
+  section {
+    padding: 50px 0 !important;
+  }
+
+  /* About section buttons */
+  .d-grid.gap-2 a {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Footer: reduce heading size */
+  .footer-image h1,
+  footer h1 {
+    font-size: 1.75rem !important;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+
+  .display-1 {
+    font-size: 2rem !important;
+  }
+
+  .display-5 {
+    font-size: 1.6rem !important;
+  }
+
+  /* Container padding */
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* Buttons smaller on phones */
+  .custom-btn {
+    padding: 10px 18px;
+    font-size: 0.875rem;
+  }
+
+  .out-custom-btn {
+    padding: 10px 18px;
+    font-size: 0.875rem;
+  }
+
+  /* About section image */
+  .four.img-fluid,
+  .img-fluid {
+    max-height: 260px;
+    margin: 0 auto;
+  }
+
+  /* payme hero */
+  .hero-image {
+    height: auto !important;
+    min-height: 160px;
+    margin-top: 24px !important;
+    margin-bottom: 24px !important;
+  }
+
+  /* payme screen placeholders */
+  .screen-placeholder {
+    height: auto !important;
+    min-height: 200px;
+  }
+
+  /* Meta tags wrapping */
+  .project-meta {
+    gap: 10px;
+  }
+
+  .meta-item {
+    font-size: 0.8rem;
+    padding: 8px 14px;
+  }
+
+  /* Stat cards in payme */
+  .stat-card .stat-number {
+    font-size: 2rem;
+  }
+
+  /* user-card padding */
+  .user-card {
+    padding: 16px;
+  }
+
+  /* problem statement padding */
+  .problem-statement {
+    padding: 40px 20px !important;
+  }
 }
