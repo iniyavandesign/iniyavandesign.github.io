@@ -82,6 +82,48 @@ window.addEventListener('load', () => {
   /* ── COPYRIGHT YEAR ──────────────────────────── */
   const yearEl = document.getElementById('copy-year');
   if (yearEl) yearEl.textContent = now.getFullYear();
+
+  /* ── ROTATING GREETING ────────────────────────── */
+  const greetings = [
+    { text: "வணக்கம்", lang: "ta" }, // Tamil
+    { text: "Hello", lang: "en" },   // English
+    { text: "नमस्ते", lang: "hi" }   // Hindi
+  ];
+  
+  const greetingEl = document.getElementById('rotating-greeting');
+  if (greetingEl) {
+    let index = 0;
+    
+    const rotate = () => {
+      // Phase 1: Fade out
+      greetingEl.classList.add('greeting-fade-out');
+      
+      setTimeout(() => {
+        // Phase 2: Update text and fade in
+        index = (index + 1) % greetings.length;
+        const current = greetings[index];
+        greetingEl.textContent = current.text;
+        
+        // Apply font-tamil only for Tamil language
+        if (current.lang === 'ta') {
+          greetingEl.classList.add('font-tamil');
+        } else {
+          greetingEl.classList.remove('font-tamil');
+        }
+
+        greetingEl.classList.remove('greeting-fade-out');
+        greetingEl.classList.add('greeting-fade-in');
+        
+        // Phase 3: Cleanup for next cycle
+        setTimeout(() => {
+          greetingEl.classList.remove('greeting-fade-in');
+        }, 400);
+      }, 400);
+    };
+
+    // Start rotating after initial delay
+    setInterval(rotate, 3000);
+  }
 });
 
 /* ── WAVE SCROLL PARALLAX ──────────────────────── */

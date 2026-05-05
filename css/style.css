@@ -309,6 +309,21 @@ h6 {
   white-space: nowrap;
 }
 
+#rotating-greeting {
+  display: inline-block;
+  transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.greeting-fade-out {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.greeting-fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .hero-heading .muted {
   color: var(--muted);
   opacity: 0.6;
@@ -319,6 +334,10 @@ h6 {
   font-style: italic;
   font-weight: 400;
   color: var(--fg);
+}
+
+.font-tamil {
+  font-family: 'Mukta Malar', sans-serif !important;
 }
 
 /* Subtitle */
