@@ -346,57 +346,108 @@ h6 {
 /* Stats */
 .hero-stats {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: flex-start;
-  gap: 24px;
-  margin-bottom: 36px;
+  gap: 16px;
+  margin-bottom: 40px;
+  max-width: 600px; /* Optional: constrain width to keep cards compact */
 }
 
 .stat {
+  flex: 1; /* Makes all 3 cards equal width */
   display: flex;
   flex-direction: column;
+  justify-content: center; /* Vertically center content */
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 16px 20px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.stat:hover {
+  border-color: var(--fg);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.06);
 }
 
 .stat-value {
   display: flex;
   align-items: baseline;
   gap: 2px;
+  min-height: 2rem; /* Ensure consistent height for the value area */
 }
 
 .stat-num {
-  font-size: 2.25rem;
-  font-weight: 900;
-  line-height: 1;
+  font-size: 1.6rem; /* Slightly smaller to accommodate text in 3rd box */
+  font-weight: 800;
+  line-height: 1.1;
   letter-spacing: -0.04em;
-}
-
-.stat-plus {
-  font-size: 1.5rem;
-  font-weight: 700;
   color: var(--fg);
 }
 
-.stat-label {
-  font-size: 0.65rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
+.stat-plus {
+  font-size: 1.25rem;
+  font-weight: 700;
   color: var(--muted);
-  margin-top: 4px;
 }
 
-.stat-divider {
-  width: 1px;
-  height: 40px;
-  background: var(--border);
+.stat-label {
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  margin-top: 8px;
+  font-weight: 600;
 }
 
 /* Actions */
 .hero-actions {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  align-items: baseline;
-  justify-content: flex-start;
-  gap: 24px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  z-index: 10;
+}
+
+.scroll-icon {
+  width: 20px;
+  height: 32px;
+  border: 1.5px solid var(--fg);
+  border-radius: 12px;
+  position: relative;
+  opacity: 0.6;
+}
+
+.scroll-dot {
+  width: 3px;
+  height: 3px;
+  background: var(--fg);
+  border-radius: 50%;
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: scrollDown 2s ease-in-out infinite;
+}
+
+@keyframes scrollDown {
+  0% {
+    opacity: 0;
+    top: 6px;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 18px;
+  }
 }
 
 /* 3D Background Canvas */
@@ -965,16 +1016,9 @@ h6 {
 }
 
 @media (max-width: 768px) {
-  /* Mobile fix for skills ticker: stick to bottom */
   .skills-ticker {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
-    /* ensure it stays above other content */
-    background: var(--fg);
-    padding: 12px 0;
+    padding: 16px 0;
+    margin-top: 40px;
   }
 
   :root {
@@ -1010,15 +1054,18 @@ h6 {
 
   .hero-stats {
     gap: 12px;
+    max-width: none;
     flex-wrap: wrap;
   }
 
-  .stat-divider {
-    display: none;
+  .stat {
+    flex: 1 1 140px;
+    padding: 12px 16px;
+    min-width: 0;
   }
 
   .stat-num {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 
   .work-section {
@@ -1066,10 +1113,15 @@ h6 {
     display: none;
   }
 
-  .hero-actions, .about-actions {
+  .about-actions {
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
+  }
+
+  .hero-actions {
+    align-items: center;
+    bottom: 60px;
   }
 
   .about-actions .btn-primary-dark, 
