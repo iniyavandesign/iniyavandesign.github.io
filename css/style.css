@@ -1152,6 +1152,7 @@ h6 {
   }
 
   .about-actions .btn-primary-dark,
+  .about-actions .btn-outline-dark,
   .about-actions .custom-btn {
     width: 100%;
     text-align: center;
