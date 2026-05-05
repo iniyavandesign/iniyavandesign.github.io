@@ -965,6 +965,18 @@ h6 {
 }
 
 @media (max-width: 768px) {
+  /* Mobile fix for skills ticker: stick to bottom */
+  .skills-ticker {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    /* ensure it stays above other content */
+    background: var(--fg);
+    padding: 12px 0;
+  }
+
   :root {
     --pad-x: 20px;
   }
@@ -977,9 +989,9 @@ h6 {
     display: none;
   }
 
-  .nav-cta {
+  .nav-cta, .custom-btn {
     padding: 6px 14px !important;
-    font-size: 0.75rem !important;
+    font-size: 0.72rem !important;
   }
 
   .hero {
@@ -1054,10 +1066,16 @@ h6 {
     display: none;
   }
 
-  .hero-actions {
+  .hero-actions, .about-actions {
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
+  }
+
+  .about-actions .btn-primary-dark, 
+  .about-actions .custom-btn {
+    width: 100%;
+    text-align: center;
   }
 }
 
@@ -1072,4 +1090,51 @@ h6 {
   body {
     cursor: auto;
   }
+}
+
+/* ── CUSTOM BUTTONS ───────────────────────────── */
+.custom-btn {
+  display: inline-block;
+  background-color: #000;
+  color: #fff !important;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 9999px; /* Pill shape */
+  padding: 12px 24px;
+  border: 1px solid transparent;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+}
+
+.custom-btn:hover {
+  background-color: #1f2937;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+  color: #fff !important;
+}
+
+.out-custom-btn {
+  display: inline-block;
+  background-color: transparent;
+  color: #1f2937 !important;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  padding: 12px 24px;
+  border: 1px solid #d1d5db;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+}
+
+.out-custom-btn:hover {
+  border-color: #000;
+  background-color: #fff;
+  color: #000 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
