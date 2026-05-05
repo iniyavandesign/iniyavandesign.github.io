@@ -369,37 +369,42 @@ h6 {
   justify-content: flex-start;
   gap: 16px;
   margin-bottom: 40px;
-  max-width: 600px; /* Optional: constrain width to keep cards compact */
+  max-width: 600px;
+  /* Optional: constrain width to keep cards compact */
 }
 
 .stat {
-  flex: 1; /* Makes all 3 cards equal width */
+  flex: 1;
+  /* Makes all 3 cards equal width */
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Vertically center content */
+  justify-content: center;
+  /* Vertically center content */
   background: var(--bg);
   border: 1px solid var(--border);
   padding: 16px 20px;
   border-radius: 12px;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
 }
 
 .stat:hover {
   border-color: var(--fg);
   transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.06);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
 }
 
 .stat-value {
   display: flex;
   align-items: baseline;
   gap: 2px;
-  min-height: 2rem; /* Ensure consistent height for the value area */
+  min-height: 2rem;
+  /* Ensure consistent height for the value area */
 }
 
 .stat-num {
-  font-size: 1.6rem; /* Slightly smaller to accommodate text in 3rd box */
+  font-size: 1.6rem;
+  /* Slightly smaller to accommodate text in 3rd box */
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -0.04em;
@@ -460,9 +465,11 @@ h6 {
     opacity: 0;
     top: 6px;
   }
+
   30% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
     top: 18px;
@@ -1052,7 +1059,8 @@ h6 {
     display: none;
   }
 
-  .nav-cta, .custom-btn {
+  .nav-cta,
+  .custom-btn {
     padding: 6px 14px !important;
     font-size: 0.72rem !important;
   }
@@ -1143,7 +1151,7 @@ h6 {
     bottom: 60px;
   }
 
-  .about-actions .btn-primary-dark, 
+  .about-actions .btn-primary-dark,
   .about-actions .custom-btn {
     width: 100%;
     text-align: center;
@@ -1170,7 +1178,8 @@ h6 {
   color: #fff !important;
   font-size: 0.875rem;
   font-weight: 600;
-  border-radius: 9999px; /* Pill shape */
+  border-radius: 9999px;
+  /* Pill shape */
   padding: 12px 24px;
   border: 1px solid transparent;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
