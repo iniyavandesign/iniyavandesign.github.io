@@ -896,6 +896,12 @@ h6 {
   gap: 32px;
 }
 
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
 /* Section styling */
 .cs-section {
   padding: 100px 0;
@@ -1002,7 +1008,8 @@ h6 {
 @media (max-width: 900px) {
 
   .grid-2,
-  .grid-3 {
+  .grid-3,
+  .grid-4 {
     grid-template-columns: 1fr;
     gap: 40px;
   }
