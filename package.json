@@ -1,0 +1,12 @@
+{
+  "name": "iniyavandesign-tracker",
+  "version": "1.0.0",
+  "description": "App Install Monitoring Server",
+  "main": "install.js",
+  "scripts": {
+    "start": "node install.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

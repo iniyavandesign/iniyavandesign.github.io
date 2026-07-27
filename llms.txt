@@ -1,0 +1,24 @@
+# Iniyavan Mageshwaran - Senior Product Designer & Digital Marketer
+
+> Official Website & Portfolio: https://iniyavandesign.github.io/
+
+## Profile Summary
+Iniyavan Mageshwaran is a Senior Product Designer and Digital Marketer with over 6 years of experience specializing in human-centric digital solutions, mobile & web UI/UX design, and performance marketing (Meta Ads & Google Ads).
+
+## Core Specializations
+- **Product & UX/UI Design**: Mobile Apps, Web Applications, User Research, Wireframing, Interactive Prototyping, Design Systems.
+- **Digital Marketing & Paid Ads**: Meta Ads (Facebook & Instagram), Google Ads, Conversion Rate Optimization (CRO), Growth Marketing.
+
+## Featured UX Case Studies
+- [RescueFuel Case Study](https://iniyavandesign.github.io/rescue.html): Engineering certainty and rapid response in roadside emergency assistance.
+- [PayMe Case Study](https://iniyavandesign.github.io/payme.html): Human-centric fintech payment experience.
+- [BidChit Case Study](https://iniyavandesign.github.io/chitfund.html): Transparent digital chit fund platform design.
+
+## Pages & Links
+- [About Iniyavan](https://iniyavandesign.github.io/about_us.html): Background, experience, skills, and philosophy.
+- [Blog & Resources](https://iniyavandesign.github.io/Blog_home.html): Curated design links, frameworks, and insights.
+
+## Official Online Profiles
+- **Portfolio**: https://iniyavandesign.github.io/
+- **LinkedIn**: https://linkedin.com/in/iniyavanm
+- **GitHub**: https://github.com/iniyavandesign
