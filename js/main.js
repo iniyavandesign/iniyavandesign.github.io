@@ -85,8 +85,8 @@ window.addEventListener('load', () => {
 
   /* ── ROTATING GREETING ────────────────────────── */
   const greetings = [
-    { text: "வணக்கம்", lang: "ta" }, // Tamil
-    { text: "Hello", lang: "en" },   // English
+    { text: "Hello", lang: "en" }, // Tamil
+    { text: "வணக்கம்", lang: "ta" },   // English
     { text: "नमस्ते", lang: "hi" }   // Hindi
   ];
   
